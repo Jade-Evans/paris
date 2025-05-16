@@ -1,16 +1,74 @@
-*{
-    box-sizing: border-box;
+*{  box-sizing: border-box;
     margin: 0;
     padding: 0;
     /*border: 1px dotted #f45;*/
-
-/************************Fonts and Color styling*****************************************/
 }
+/************************Fonts and Color styling*****************************************/
+
 body{
     /*background-color: 	#FAF9F7;*/
-    background-color: #E8CFC1;
+    background-color: #FAF9F7;
     font-family: Montserrat, sans serif;
 }
+
+.logo p,  .it-card-title{
+    font-family: "Parisienne", cursive;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.page-title{
+    font-size: 80px;
+    font-style: italic;
+    font-weight: 200;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+ .tagline{
+    color: #2E2E2E;
+    
+    font-size: 40px;
+    
+    font-size: 32px;
+    font-weight: lighter;
+    
+}
+
+
+
+
+.intro-paragraph{
+    font-size: 24px;
+    margin: 35px;
+    text-align: center;
+}
+
+.itinerary-section{
+    color:#FAF9F7;
+    background-color: #2E2E2E;
+}
+
+.itinerary-section h3{
+    font-size: 50px;
+    font-style: italic;
+    font-weight: 200;
+    margin: 20px 0px;
+}
+
+.it-card{
+    background-color: #FAF9F7;
+    color: #2E2E2E;
+    border: 1px solid #a29b9b;
+    /*box-shadow: 6px 6px 6px #a29b9b;*/
+    flex-basis: 200px;
+    padding: 20px;
+    
+}
+.it-card-description{
+    font-size: 16px;
+}
+
 
 .header-container,.footer-container{
     background-color: #2E2E2E;   
@@ -19,75 +77,21 @@ body{
 .header, .copyright{
     color: #FAF9F7;   
 }
-
-.introduction, .itinerary-card{   
-    color: 
-}
-
-.itinerary-section{
-    background-color: #A6A6A6;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-items: center;
-    padding: 40px;
-    margin: 30px;
-    border-radius: 6px;
-    box-shadow: 8px 8px 8px#2E2E2E;
-    gap: 20px;
-}
-
-.introduction h2{
-    font-weight: lighter;
-
-}
-
-.itinerary-card{
-    background-color: #FAF9F7;
-    box-shadow: 11px 12px 12px#2E2E2E;
-    flex-basis: 280px;
-    padding: 20px;
-    
-}
-
-.itinerary-title{
-    font-size: 50px;
-}
-
-.itinerary-description{
-    font-size: 16px;
-}
-
+/************************Flex/Layout****************************************/
 
 .header{
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 20px 35px;
+    align-items: last baseline;
+    padding: 15px 25px;
 }
-
-
-
-
-.logo p, .introduction h1, .itinerary-title{
-     font-family: "Parisienne", cursive;
-        font-weight: 400;
-        font-style: normal;
-        }
-
-.logo p, .itinerary-title{
-    font-size: 30px;
-}
-
-
 
 .menu{
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;  
-    gap: 40px;
-    /*padding: 0 20px;*/
+    gap: 60px;
 }
 
 .logo{
@@ -97,62 +101,56 @@ body{
     margin-right:auto;
 }
 
-
-
-   
+.banner{
+    width: 100%;
+    position: relative;
+    height: 450px;
 }
 
-.nav-list li{
-    padding: 5px 20px;
+.banner-text{
+    position: absolute;
+    top:28%;
+    left:35%;
+    transform: translate(-50%,-50%);
 }
 
-.main-content{
-    margin: 5px 35px;
-   
+.banner img{
+    width: 100%;
+    height: 100%;
+    opacity: 60%;
+    object-fit: cover;
 }
 
-.introduction{
+.index-titles{
     display: flex;
     align-items: center;
     flex-direction: column;
-    font-family: Arial, Helvetica, sans-serif;
-    margin:40px;
-    gap: 5px;
-    
 }
 
-.introduction h1{
-    font-size: 120px;
-    color:rgb(53, 51, 51);
+.itinerary-section{
+    margin:0;
+    width: 100%;/*ensures full width background*/
+    padding: 15px 30px 60px;
+    display: flex;
+    flex-direction: column;    
 }
 
-.introduction h2{
-    font-size: 40px;
-    font-weight: 400px;
-    text-align: center;
-}
-
-
-.itinerary-grid{
+.it-card-grid{
     display:flex;
     justify-content: space-between;
     align-items: stretch;
-    margin:10px;
-    gap: 35px;
-    flex-wrap: wrap;
-    
-    
-    
-    
+    gap: 10px;
+    flex-wrap: wrap; 
+    margin-top: 30px;  
 }
 
 
-.itinerary-card{
+.it-card{
     display: flex;
     flex-direction:column;
     align-items: center;
-    border-radius: 9px;
-    padding: 20px 10px;
+    border-radius: 6px;
+    padding: 10px 10px;
     flex:1;
     min-width: 300px;
     max-width: 400px;
@@ -160,13 +158,13 @@ body{
 
 }
 
-.itinerary-card img{
+.it-card img{
     padding: 10px;
     /*border-radius: 20%;*/
-    flex-shrink: 1;
+    flex:0;
 }
 
-.itinerary-description{
+.it-card-description{
     text-align: center;
 }
 
