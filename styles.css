@@ -24,9 +24,19 @@
     color: white;
     text-decoration:none;
     font-family: Montserrat, sans serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.nav-bar button {
+.nav-item:hover{
+    
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Subtle glow effect */
+  transform: translateY(-2px);  /* Slight lift effect */
+  color:#a29b9b;
+}
+
+
+.nav-button {
   /*cursor: pointer;*/
   font-size: 16px;  
   border: none;
@@ -92,6 +102,12 @@
     padding: 20px;
     
 }
+
+.it-card:hover{
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Subtle glow effect */
+    transform: translateY(-2px);  /* Slight lift effect */
+    color:#a29b9b;
+}
 .it-card-description{
     font-size: 16px;
 }
@@ -148,15 +164,7 @@
     gap: 60px;
 }
 
-.dropdown-products{
-    display: none;
-}
-.menu-products:hover .dropdown-products{
-    display: block;
-    border: 2px solid white;
-    
-    transition-delay: 10sec;
-}
+
 
 .logo{
     display: flex;
@@ -197,7 +205,7 @@
     padding: 15px 30px 60px;
     display: flex;
     flex-direction: column; 
-    gap: 20px;   
+    gap: 40px;   
 }
 
 .it-card-grid{
