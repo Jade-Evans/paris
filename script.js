@@ -22,9 +22,9 @@ exploreCultureButton.addEventListener("click",()=>{
 });
 
 exploreGardenButton.addEventListener("click",()=>{
-    window.location.href="garden.html";
+    window.location.href="gardens.html";
 });
 
 exploreEntertainmentButton.addEventListener("click",()=>{
-    window.location.href="gardens.html";
+    window.location.href="entertainment.html";
 });
