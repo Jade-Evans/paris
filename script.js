@@ -10,21 +10,34 @@ const exploreGardenButton = document.getElementById("exploreGardenButton");
 const exploreEntertainmentButton = document.getElementById("exploreEntertainmentButton");
 
 exploreFoodButton.addEventListener("click", ()=>{
+    exploreFoodButton.classList.add("clicked");
     window.location.href="food.html";
+    
 });
 
 exploreArchitectureButton.addEventListener("click", ()=>{
+    exploreArchitectureButton.classList.add("clicked");
     window.location.href="architecture.html";
+    
+    
 });
 
 exploreCultureButton.addEventListener("click",()=>{
+    exploreCultureButton.classList.add("clicked");
     window.location.href="artculture.html";
+    
 });
 
 exploreGardenButton.addEventListener("click",()=>{
+    exploreGardenButton.classList.add("clicked");
     window.location.href="gardens.html";
+    
+    
 });
 
 exploreEntertainmentButton.addEventListener("click",()=>{
+    exploreEntertainmentButton.classList.add("clicked");
     window.location.href="entertainment.html";
+    
+    
 });
