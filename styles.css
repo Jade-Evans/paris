@@ -1,20 +1,50 @@
 *{  box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Montserrat, sans serif;
     /*border: 1px dotted #f45;*/
 }
 /************************Fonts and Color styling*****************************************/
-
-body{
-    /*background-color: 	#FAF9F7;*/
-    background-color: #FAF9F7;
-    font-family: Montserrat, sans serif;
-}
+/*different fonts*/
 
 .logo p,  .it-card-title{
     font-family: "Parisienne", cursive;
     font-size: 28px;
     font-weight: 400;
+}
+
+.nav-bar{
+    display:flex;
+    align-items: first baseline;
+    justify-content: center;
+    gap: 40px;
+  
+}
+.nav-item{
+    color: white;
+    text-decoration:none;
+    font-family: Montserrat, sans serif;
+}
+
+.nav-bar button {
+  /*cursor: pointer;*/
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  padding: 14px 16px;
+  background-color: inherit;
+  margin: 0;
+}
+
+.nav-content{
+    display:none;
+}
+.nav-content a:hover{
+    display:block;
+    text-decoration: none;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    color:#2E2E2E;
 }
 
 .page-title{
@@ -35,9 +65,6 @@ body{
     
 }
 
-
-
-
 .intro-paragraph{
     font-size: 24px;
     margin: 35px;
@@ -49,8 +76,8 @@ body{
     background-color: #2E2E2E;
 }
 
-.itinerary-section h3{
-    font-size: 50px;
+.it-heading{
+    font-size: 70px;
     font-style: italic;
     font-weight: 200;
     margin: 20px 0px;
@@ -77,6 +104,25 @@ body{
 .header, .copyright{
     color: #FAF9F7;   
 }
+
+
+/****TOPIC SECTION******/
+.indexTopicButton{
+    border:none;
+    padding:10px;
+    background-color: #a29b9b;
+    color:#2E2E2E;
+    font-family: Montserrat, sans-serif;
+    font-size:16px;
+    border-radius: 8px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.indexTopicButton:hover{
+    background-color: #5f5353;
+    color:#FAF9F7;
+    font-size: 16px;
+}
 /************************Flex/Layout****************************************/
 
 .header{
@@ -86,12 +132,22 @@ body{
     padding: 15px 25px;
 }
 
-.menu{
+.menu-products{
     display: flex;
     justify-content: space-between;
     align-items: center;
     list-style: none;  
     gap: 60px;
+}
+
+.dropdown-products{
+    display: none;
+}
+.menu-products:hover .dropdown-products{
+    display: block;
+    border: 2px solid white;
+    
+    transition-delay: 10sec;
 }
 
 .logo{
@@ -132,7 +188,8 @@ body{
     width: 100%;/*ensures full width background*/
     padding: 15px 30px 60px;
     display: flex;
-    flex-direction: column;    
+    flex-direction: column; 
+    gap: 20px;   
 }
 
 .it-card-grid{
@@ -141,7 +198,7 @@ body{
     align-items: stretch;
     gap: 10px;
     flex-wrap: wrap; 
-    margin-top: 30px;  
+    margin-top: 10px; 
 }
 
 
@@ -167,7 +224,58 @@ body{
 .it-card-description{
     text-align: center;
 }
+/*--TOPIC SECTION-----------------------------------------------------------------------------------*/
+.topics-section{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    text-align: left;
+    gap: 20px;
+    
+    padding: 15px 50px 60px;
+    margin:0;
+    
+}
+.topics-section p{
+    text-align: left;
+}
 
+.topic-card-grid{
+    display:flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    width: 100%;
+    
+    
+}
+
+.topic-card{
+    display: flex;
+    flex-wrap: wrap;  
+    margin: 30px 0; 
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+    justify-content: space-between;
+    flex:1;
+}
+
+.topic-card-text{
+    flex:1;
+}
+
+.topic-content{
+    font-size: 24px;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+}
+.topic-card img{
+    /*flex:2;*/
+    width: 400px;
+    height: auto;
+}
+
+/*--FOOTER SECTION-----------------------------------------------------------------------------------*/
 .footer-container{
     /*width: 100%;*/
     height: 70px;

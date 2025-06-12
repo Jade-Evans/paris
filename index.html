@@ -17,12 +17,29 @@
                     width="40" height="30" alt="France">
                 <p>Jade's Parisian Guide</p>
             </div>
-            <ul class="menu">
-                <li>Home</li>
-                <li>Itineraries</li>
-                <li>Activities</li>
-                <li>Travel Tips</li>
-            </ul>
+            <div class="nav-bar">
+                <a href="#home" class="nav-item">Home</a>
+                <div class="nav-item">
+                    <button class="nav-item">Itineraries</button>
+                    <div class="nav-content">
+                        <a href="#it1">Itinerary I</a>
+                        <a href="#it2">Itinerary II</a>
+                        <a href="#it3">Itinerary III</a>
+                    </div>
+                </div>
+
+                <div class="nav-item">
+                    <button class="nav-item">Activities</button>
+                    <div class="nav-content">
+                        <a href="#Food">Cuisine</a>
+                        <a href="#Food">Architecture</a>
+                        <a href="#Food">Museums & Culture</a>
+                        <a href="#Food">Gardens</a>
+                        <a href="#Food">Entertainment</a>
+                    </div>
+                </div>
+                <a href="#traveltips" class="nav-item">Travel Tips</a>
+            </div>
         </div>
     </div>
 
@@ -96,7 +113,7 @@
                         croissant on the go or enjoying a glass of wine in a local brasserie, Paris 
                         serves up unforgettable culinary experiences."</p>
                     <br>
-                    <p><strong>[Click to find out more]</strong></p>
+                    <button id="exploreFoodButton" class="indexTopicButton">Explore Parisian Food & Drink</button>
                 </div>
                 <img src="imgs/patisserie.jpg" alt="patisserie cakes">
             </div>
@@ -111,7 +128,7 @@
                         croissant on the go or enjoying a glass of wine in a local brasserie, Paris 
                         serves up unforgettable culinary experiences."</p>
                     <br>
-                    <p><strong>[Click to find out more]</strong></p>
+                    <button id="exploreArchitectureButton" class="indexTopicButton">Explore Parisian Architecture</button>
                 </div>
             </div>
             <div class="topic-card">
@@ -121,24 +138,23 @@
            
                     <p class="topic-content">"Delve into Paris’ world-renowned museums and galleries. From classical art at the Louvre to contemporary works at the Centre Pompidou, there’s no shortage of cultural experiences to enrich your visit. Paris is a true cultural hub."</p>
                     <br>
-                    <p><strong>[Click to find out more]</strong></p>
+                    <button id="exploreCultureButton" class="indexTopicButton">Explore Parisian Culture</button>
                 </div>
                 <img src="imgs/Louvre.jpg" alt="louvre">
             </div>
 
             <div class="topic-card">
+                <img src="imgs/JardinDuLuxembourg.jpg" alt="Jardin du Luxembourg, Paris colour photo">
                 <div class="topic-card-text">
                     <h2>Parks & Gardens</h2>
                     <br>
-           
                     <p class="topic-content">""Take a breath of fresh air in one of Paris’s many green spaces.
                          From the manicured lawns of the Jardin du Luxembourg to the romantic paths of Parc des 
-                         Buttes-Chaumont, nature is never far away."
-"</p>
+                         Buttes-Chaumont, nature is never far away."</p>
                     <br>
-                    <p><strong>[Click to find out more]</strong></p>
+                    <button id="exploreGardenButton" class="indexTopicButton">Explore Parisian Gardens</button>
                 </div>
-                <img src="imgs/Louvre.jpg" alt="louvre">
+                
             </div>
 
              <div class="topic-card">
@@ -150,7 +166,7 @@
                          Enjoy a cabaret at Moulin Rouge, live jazz in hidden clubs, or cocktails in chic 
                          rooftop bars."</p>
                     <br>
-                    <p><strong>[Click to find out more]</strong></p>
+                    <button id="exploreEntertainmentButton" class="indexTopicButton">Explore Parisian Entertainment</button>
                 </div>
                 <img src="imgs/MoulinRouge.jpg" alt="Moulin Rouge night scene">
             </div>
@@ -159,10 +175,11 @@
         </div>
              
 
-                
+    </div>            
     <div class="footer-container">
         <footer class="copyright">Copyright@JadeEvansInc.</footer>
         <div class="social-icons"><img src='imgs/social-icons.svg'>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
