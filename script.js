@@ -9,3 +9,22 @@ const exploreCultureButton = document.getElementById("exploreCultureButton");
 const exploreGardenButton = document.getElementById("exploreGardenButton");
 const exploreEntertainmentButton = document.getElementById("exploreEntertainmentButton");
 
+exploreFoodButton.addEventListener("click", ()=>{
+    window.location.href="food.html";
+});
+
+exploreArchitectureButton.addEventListener("click", ()=>{
+    window.location.href="architecture.html";
+});
+
+exploreCultureButton.addEventListener("click",()=>{
+    window.location.href="artculture.html";
+});
+
+exploreGardenButton.addEventListener("click",()=>{
+    window.location.href="garden.html";
+});
+
+exploreEntertainmentButton.addEventListener("click",()=>{
+    window.location.href="gardens.html";
+});
