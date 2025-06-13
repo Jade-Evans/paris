@@ -18,6 +18,7 @@
     align-items: first baseline;
     justify-content: center;
     gap: 40px;
+    border: red solid 2px;
   
 }
 .nav-item{
@@ -107,6 +108,7 @@
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Subtle glow effect */
     transform: translateY(-2px);  /* Slight lift effect */
     color:#a29b9b;
+    cursor: pointer;
 }
 .it-card-description{
     font-size: 16px;
@@ -119,6 +121,7 @@
 
 .header, .copyright{
     color: #FAF9F7;   
+    border: 2px red dotted;
 }
 
 
@@ -138,6 +141,7 @@
     background-color: #5f5353;
     color:#FAF9F7;
     font-size: 1.1em;
+    cursor: pointer;
     
 }
 
@@ -152,7 +156,7 @@
 .header{
     display: flex;
     justify-content: center;
-    align-items: last baseline;
+    align-items: center;
     padding: 15px 25px;
 }
 
