@@ -15,48 +15,61 @@
 
 .nav-bar{
     display:flex;
-    align-items: first baseline;
+    align-items: center;
     justify-content: center;
-    gap: 40px;
-    border: red solid 2px;
-  
+    gap: 40px;     
 }
-.nav-item{
-    color: white;
-    text-decoration:none;
+
+ul{
+    list-style: none;/*gets rid of the bullets*/
+    
+}
+
+ul li{
+    display: inline-block;
+    position: relative;
+}
+
+ul li a{
+    display: block;
+    padding: 10px 15px;
+     text-decoration: none;
+    color:#FAF9F7;
     font-family: Montserrat, sans serif;
     cursor: pointer;
     transition: all 0.3s ease;
+    font-size: 12px;
+    text-align: left;
+
 }
 
-.nav-item:hover{
-    
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.7); /* Subtle glow effect */
-  transform: translateY(-2px);  /* Slight lift effect */
-  color:#a29b9b;
-}
-
-
-.nav-button {
-  /*cursor: pointer;*/
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  padding: 14px 16px;
-  background-color: inherit;
-  margin: 0;
-}
-
-.nav-content{
-    display:none;
-}
-.nav-content a:hover{
+ul li ul.dropdown li{
     display:block;
-    text-decoration: none;
-    background-color: white;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    color:#2E2E2E;
+   
+
 }
+
+ul li ul.dropdown{
+    width: 100%;
+    background-color:#2E2E2E;
+    position:absolute;
+    display:none;
+    z-index: 999;
+
+}
+
+    
+ul li a:hover{/*aka what happens when we hover over home, itineraties, etc.**/
+  
+  background-color:#5f5353;
+}
+
+
+ul li:hover ul.dropdown{
+    display:block;
+}
+
+/*END OF NAV BAR STYLING SECTION*/
 
 .page-title{
     font-size: 80px;
