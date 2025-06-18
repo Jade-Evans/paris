@@ -32,8 +32,8 @@ ul li{
 
 ul li a{
     display: block;
-    padding: 10px 15px;
-     text-decoration: none;
+    padding: 15px 15px;
+    text-decoration: none;
     color:#FAF9F7;
     font-family: Montserrat, sans serif;
     cursor: pointer;
@@ -50,12 +50,17 @@ ul li ul.dropdown li{
 }
 
 ul li ul.dropdown{
-    width: 100%;
     background-color:#2E2E2E;
-    position:absolute;
-    display:none;
-    z-index: 999;
+    position:absolute; /*relates it to the relative parent*/
+    display:none; /*hides the dropdown when not on hover*/
+    z-index: 999; /*sits it near the top*/
+    min-width:fit-content;/*expands the width to fit the widest content i.e. "Entertainment"*/
 
+
+}
+
+ul.dropdown li a{
+    padding:10px 5px;
 }
 
     
