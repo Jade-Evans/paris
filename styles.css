@@ -1,7 +1,7 @@
 *{  box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Montserrat, sans serif;
+    font-family: Montserrat, sans-serif;
     /*border: 1px dotted #f45;*/
 }
 /************************Fonts and Color styling*****************************************/
@@ -20,17 +20,17 @@
     gap: 40px;     
 }
 
-ul{
+.nav-bar ul{
     list-style: none;/*gets rid of the bullets*/
     
 }
 
-ul li{
+.nav-bar li{
     display: inline-block;
     position: relative;
 }
 
-ul li a{
+.nav-bar li a{
     display: block;
     padding: 15px 15px;
     text-decoration: none;
@@ -39,17 +39,17 @@ ul li a{
     cursor: pointer;
     transition: all 0.3s ease;
     font-size: 12px;
-    text-align: left;
+    text-align: center;
 
 }
 
-ul li ul.dropdown li{
+.nav-bar li ul.dropdown li{
     display:block;
    
 
 }
 
-ul li ul.dropdown{
+.nav-bar li ul.dropdown{
     background-color:#2E2E2E;
     position:absolute; /*relates it to the relative parent*/
     display:none; /*hides the dropdown when not on hover*/
@@ -59,18 +59,18 @@ ul li ul.dropdown{
 
 }
 
-ul.dropdown li a{
+.nav-bar.dropdown li a{
     padding:10px 5px;
 }
 
     
-ul li a:hover{/*aka what happens when we hover over home, itineraties, etc.**/
+.nav-bar li a:hover{/*aka what happens when we hover over home, itineraties, etc.**/
   
   background-color:#5f5353;
 }
 
 
-ul li:hover ul.dropdown{
+.nav-bar ul li:hover ul.dropdown{
     display:block;
 }
 
@@ -116,7 +116,6 @@ ul li:hover ul.dropdown{
     background-color: #FAF9F7;
     color: #2E2E2E;
     border: 1px solid #a29b9b;
-    /*box-shadow: 6px 6px 6px #a29b9b;*/
     flex-basis: 200px;
     padding: 20px;
     
@@ -139,7 +138,6 @@ ul li:hover ul.dropdown{
 
 .header, .copyright{
     color: #FAF9F7;   
-    border: 2px red dotted;
 }
 
 
@@ -177,16 +175,6 @@ ul li:hover ul.dropdown{
     align-items: center;
     padding: 15px 25px;
 }
-
-.menu-products{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;  
-    gap: 60px;
-}
-
-
 
 .logo{
     display: flex;
@@ -232,9 +220,8 @@ ul li:hover ul.dropdown{
 
 .it-card-grid{
     display:flex;
-    justify-content: space-between;
-    align-items: stretch;
-    gap: 10px;
+    justify-content: space-evenly;
+    gap: 20px;
     flex-wrap: wrap; 
     margin-top: 10px; 
 }
@@ -246,17 +233,19 @@ ul li:hover ul.dropdown{
     align-items: center;
     border-radius: 6px;
     padding: 10px 10px;
-    flex:1;
     min-width: 300px;
-    max-width: 400px;
+    max-width: 450px;
     
 
+}
+.it-card-title{
+    text-align: center;
 }
 
 .it-card img{
     padding: 10px;
-    /*border-radius: 20%;*/
-    flex:0;
+    max-width: fit-content;
+    flex:1;
 }
 
 .it-card-description{
@@ -322,6 +311,50 @@ ul li:hover ul.dropdown{
     align-items: center;
     gap:30px;
     margin-top: 50px;
+}
+
+/*PAGE SPECIFIC STYLING-----------------------------------------*/
+.headings{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.main-container{
+    display:flex;
+    margin: 20px;
+    gap: 30px;
+}
+
+.left-side{
+    flex:4; /*sorts ratio between LH and RH side*/
+    padding: 20px;    
+}
+
+.webpage-categories p{
+    margin-bottom: 15px;
+}
+
+.webpage-categories h3{
+    font-family: "Parisienne", cursive;
+    font-size: 28px;
+    font-weight:100;
+}
+.webpage-categories p{
+    font-size: 14px;
+}
+
+
+.right-side{
+    flex:6;/*sorts ratio between LH and RH side*/
+    display: flex;
+    flex-direction: column; /*aligns image and image description vertically*/
+
+}
+
+.right-side img{
+    max-width: 100%;
 }
 
 
