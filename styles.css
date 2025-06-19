@@ -332,18 +332,45 @@
     padding: 20px;    
 }
 
-.webpage-categories p{
-    margin-bottom: 15px;
+.webpage-categories{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
-.webpage-categories h3{
-    font-family: "Parisienne", cursive;
-    font-size: 28px;
-    font-weight:100;
-}
 .webpage-categories p{
-    font-size: 14px;
+    margin-bottom: 15px;
+    font-size: 16px;
 }
+
+.category-item{
+    list-style-type: none;
+}
+
+.category-item .submenu{
+    display:none;
+}
+
+.category-item h3:hover, .submenu li:hover{
+    color:#a29b9b;
+}
+.category-item:hover .submenu{
+    display:block;
+    transition: 0.3s ease;
+}
+
+.category-item h3{
+    font-family: "Parisienne", cursive;
+    font-size: 30px;
+    font-weight:100;
+    
+    
+}
+.submenu{
+    padding-left:5px;
+    display:none;
+}
+
 
 
 .right-side{

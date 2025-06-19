@@ -41,3 +41,4 @@ exploreEntertainmentButton.addEventListener("click",()=>{
     
     
 });
+
