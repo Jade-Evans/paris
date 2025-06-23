@@ -4,6 +4,10 @@
     font-family: Montserrat, sans-serif;
     /*border: 1px dotted #f45;*/
 }
+
+html, body{
+    overflow-y: auto;
+}
 /************************Fonts and Color styling*****************************************/
 /*different fonts*/
 
@@ -351,7 +355,12 @@
     display:none;
 }
 
-.category-item h3:hover, .submenu li:hover{
+.submenu li a{
+    text-decoration: none;
+    color:#2E2E2E;
+}
+
+.category-item h3:hover, .submenu li a:hover{
     color:#a29b9b;
 }
 .category-item:hover .submenu{
@@ -363,6 +372,7 @@
     font-family: "Parisienne", cursive;
     font-size: 30px;
     font-weight:100;
+    padding-right: 15px;
     
     
 }
