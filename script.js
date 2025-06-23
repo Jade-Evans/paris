@@ -48,16 +48,6 @@ exploreEntertainmentButton.addEventListener("click",()=>{
 };
 //FOOD PAGE LOGIC**************************************************************************//
 
-//MAKING THE LINKS NAVIGATE TO EXTERNAL WEBSITES FOR CAFES/ETC.//
-const submenuTitle = document.querySelectorAll(".submenu li");
-submenuTitle.forEach(place=>{
-    place.addEventListener("click", ()=>{
-    place.classList.add("clicked");
-    const link = place.querySelector("a");
-    window.location.href = link.href;
-    });
-});
-
 const foodImage = document.getElementById("foodImage");
 const boulangerie = document.getElementById("boulangerie");
 const coffee = document.getElementById("coffee");
