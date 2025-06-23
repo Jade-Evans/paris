@@ -18,7 +18,7 @@ exploreFoodButton.addEventListener("click", ()=>{
 exploreArchitectureButton.addEventListener("click", ()=>{
     exploreArchitectureButton.classList.add("clicked");
     window.location.href="architecture.html";
-    
+ 
     
 });
 
@@ -41,4 +41,20 @@ exploreEntertainmentButton.addEventListener("click",()=>{
     
     
 });
+
+//MAKING THE LINKS NAVIGATE TO EXTERNAL WEBSITES FOR CAFES/ETC.//
+
+const submenuTitle = document.querySelectorAll(".submenu li");
+
+
+submenuTitle.forEach(place=>{
+    place.addEventListener("click", ()=>{
+    place.classList.add("clicked");
+    const link = place.querySelector("a");
+    window.location.href = link.href;
+    });
+});
+
+
+
 
