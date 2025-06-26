@@ -81,52 +81,39 @@ exploreEntertainmentButton.addEventListener("click",()=>{
 };
 //FOOD PAGE LOGIC**************************************************************************//
 const activeImage = document.getElementById("activeImage");
-
-
 const boulangerie = document.getElementById("boulangerie");
 const coffee = document.getElementById("coffee");
 const restaurant = document.getElementById("restaurant");
 const patisserie = document.getElementById("patisserie");
+const eiffeltower = document.getElementById("eiffeltower");
+const notredame = document.getElementById("notredame");
+const saintechapelle = document.getElementById("saintechapelle");
 
-if(boulangerie && activeImage){
-boulangerie.addEventListener("mouseover", ()=>{
-    activeImage.src = "imgs/squareboulangerie.jpg";
-});
+const categories = [
+  { id: "boulangerie", img: "imgs/squareboulangerie.jpg"},
+  { id: "coffee", img: "imgs/squarecoffee.jpg"},
+  { id: "restaurant", img: "imgs/squarebistro.jpg"},
+  { id: "patisserie", img: "imgs/squarepatisserie.jpg"},
+  { id: "eiffeltower", img: "imgs/eiffel-tower.jpg"},
+  { id: "notredame", img: "imgs/notre-dame.jpg"},
+  { id: "saintechapelle", img: "imgs/sainte-chapelle.jpg"},
+  { id: "arcdetriomphe", img: "imgs/arc-de-triomphe.jpg"},
+  { id: "palaisgarnier", img: "imgs/palais-garnier.jpg"},
+  { id: "luxembourgpalace", img: "imgs/luxembourg-palace.jpg"},
+]
 
-boulangerie.addEventListener("mouseout", ()=>{
-    activeImage.src = "imgs/foodGeneral.jpg";
-})
-};
+categories.forEach(({id, img})=>{//this is shorthand for: const id = category.id;const img = category.img;// start of forEach callback
+    const element = document.getElementById(id);//element is the "placeholder" for eiffel tower etc. its the same as assigning const boulangerie = document.getElementById(boulangerie) but for all in categories. 
+    if(element && activeImage){//start of if block
+    element.addEventListener("mouseover", ()=>{
+    activeImage.src = img;
+});//end of mouseover
+    element.addEventListener("mouseout", ()=>{
+      activeImage.src = activeImage.dataset.default;
+    }); //end of mouseout
+}//end of if block
+});// end of forEach callback
 
-if(coffee && activeImage){
-coffee.addEventListener("mouseover", ()=>{
-    activeImage.src = "imgs/squarecoffee.jpg";
-});
-
-coffee.addEventListener("mouseout", ()=>{
-    activeImage.src = "imgs/foodGeneral.jpg";
-})
-};
-
-if(restaurant && activeImage){
-restaurant.addEventListener("mouseover", ()=>{
-    activeImage.src = "imgs/squarebistro.jpg";
-});
-
-restaurant.addEventListener("mouseout", ()=>{
-    activeImage.src = "imgs/foodGeneral.jpg";
-})
-};
-
-if(patisserie && activeImage){
-patisserie.addEventListener("mouseover", ()=>{
-    activeImage.src = "imgs/squarepatisserie.jpg";
-});
-
-patisserie.addEventListener("mouseout", ()=>{
-    activeImage.src = "imgs/foodGeneral.jpg";
-})
-};
 
 
 //LOGIC FOR FACT CARDS APPEARING ON HOVER - CHANGING CONTENT//

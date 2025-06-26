@@ -51,5 +51,6 @@ ARCHITECTURE IMAGE CREDITS:
 4. Arc de Triomphe - Photo by Pixabay: https://www.pexels.com/photo/arc-de-triomphe-paris-2344/
 5. Palais Garnier - Photo by Margerretta: https://www.pexels.com/photo/angel-statue-on-building-548083/
 6. Luxembourg Palace - Photo by Yu Han Huang: https://www.pexels.com/photo/luxembourg-palace-and-gardens-on-a-bright-day-32467058/
-
+7. Sacre Coeur Photo by Paul Gourmaud: https://www.pexels.com/photo/crowd-of-tourists-by-the-basilica-of-the-sacred-heart-of-montmartre-in-paris-23858887/
+7. Architecture default Photo by Marvin Nast: https://www.pexels.com/photo/wooden-spiral-stairs-21038401/
       
