@@ -333,11 +333,12 @@ html, body{
     max-width: 1200px;
     align-items: stretch;
     justify-content: flex-start;
+    border: blue 2px dotted; 
 }
 
 .left-side{
-    flex:0.75; /*sorts ratio between LH and RH side*/
-    /*border: blue 2px solid;*/   
+    flex:1; /*sorts ratio between LH and RH side*/
+    border: blue 2px solid;   
     display: flex;
     padding: 20px;
 
@@ -347,12 +348,12 @@ html, body{
 .webpage-categories{
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 15px;
 }
 
 .webpage-categories p{
-    margin-bottom: 15px;
-    font-size: 16px;
+    /*margin-bottom: 15px;*/
+    font-size: 14px;
 }
 
 .category-item{
@@ -397,9 +398,10 @@ html, body{
     height:680px;
     justify-content: flex-end;
     align-items: stretch;
+    border: 2px red dotted;
 }
 
-#foodImage{
+#activeImage{
     position: absolute;
     width: 100%;
     height: 100%;

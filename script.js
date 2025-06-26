@@ -80,50 +80,51 @@ exploreEntertainmentButton.addEventListener("click",()=>{
 })
 };
 //FOOD PAGE LOGIC**************************************************************************//
+const activeImage = document.getElementById("activeImage");
 
-const foodImage = document.getElementById("foodImage");
+
 const boulangerie = document.getElementById("boulangerie");
 const coffee = document.getElementById("coffee");
 const restaurant = document.getElementById("restaurant");
 const patisserie = document.getElementById("patisserie");
 
-if(boulangerie && foodImage){
+if(boulangerie && activeImage){
 boulangerie.addEventListener("mouseover", ()=>{
-    foodImage.src = "imgs/squareboulangerie.jpg";
+    activeImage.src = "imgs/squareboulangerie.jpg";
 });
 
 boulangerie.addEventListener("mouseout", ()=>{
-    foodImage.src = "imgs/foodGeneral.jpg";
+    activeImage.src = "imgs/foodGeneral.jpg";
 })
 };
 
-if(coffee && foodImage){
+if(coffee && activeImage){
 coffee.addEventListener("mouseover", ()=>{
-    foodImage.src = "imgs/squarecoffee.jpg";
+    activeImage.src = "imgs/squarecoffee.jpg";
 });
 
 coffee.addEventListener("mouseout", ()=>{
-    foodImage.src = "imgs/foodGeneral.jpg";
+    activeImage.src = "imgs/foodGeneral.jpg";
 })
 };
 
-if(restaurant && foodImage){
+if(restaurant && activeImage){
 restaurant.addEventListener("mouseover", ()=>{
-    foodImage.src = "imgs/squarebistro.jpg";
+    activeImage.src = "imgs/squarebistro.jpg";
 });
 
 restaurant.addEventListener("mouseout", ()=>{
-    foodImage.src = "imgs/foodGeneral.jpg";
+    activeImage.src = "imgs/foodGeneral.jpg";
 })
 };
 
-if(patisserie && foodImage){
+if(patisserie && activeImage){
 patisserie.addEventListener("mouseover", ()=>{
-    foodImage.src = "imgs/squarepatisserie.jpg";
+    activeImage.src = "imgs/squarepatisserie.jpg";
 });
 
 patisserie.addEventListener("mouseout", ()=>{
-    foodImage.src = "imgs/foodGeneral.jpg";
+    activeImage.src = "imgs/foodGeneral.jpg";
 })
 };
 
@@ -131,12 +132,12 @@ patisserie.addEventListener("mouseout", ()=>{
 //LOGIC FOR FACT CARDS APPEARING ON HOVER - CHANGING CONTENT//
 
 const overlay = document.querySelector(".overlay");
-//const foodImage = document.getElementById("foodImage");//
+//const activeImage = document.getElementById("activeImage");//
 
-const links = document.querySelectorAll(".submenu li a"); // point to anchor elements directly
+const links = document.querySelectorAll(".submenu li a, .category-item h3"); // point to anchor elements directly
 links.forEach(link => {
   link.addEventListener("mouseenter", () => {
-    foodImage.style.opacity = 0.3;
+    activeImage.style.opacity = 0.3;
     overlay.style.opacity = 1;
 
     const title = document.getElementById("title");
@@ -145,8 +146,7 @@ links.forEach(link => {
     const near = document.getElementById("near");
     const reservation = document.getElementById("reservation");
     const hours = document.getElementById("hours");
-
-    
+    const architectureImage = document.getElementById("architectureImage");
 
     if (link.id === "dupain") {
     title.textContent = "Du Pain et des Idées";
@@ -193,12 +193,6 @@ links.forEach(link => {
         description.textContent = "Busy, friendly canal‑side café known for reliable espresso & filter brews, fresh baked goods, and a great relaxed vibe.";
         reservation.textContent = "Reservation required? NO";
         hours.textContent = "Opening Hours: Daily 8 AM–6 PM";
-      
-
-
- 
-    
-    
     
     } else if (link.id === "carette") {
       title.textContent = "Carette";
@@ -207,7 +201,6 @@ links.forEach(link => {
       description.textContent = "Carette is a luxurious Parisian pâtisserie serving exquisite macarons, pastries, and cakes. Its beautiful setting near the Trocadéro makes it a favorite for both locals and tourists.";
       reservation.textContent = "Reservation required? NO";
       hours.textContent = "Opening Hours: Monday to Sunday 9:00 AM - 7:00 PM";
-
 
     } else if (link.id === "berthillon") {
         title.textContent = "Berthillon";
@@ -231,9 +224,6 @@ links.forEach(link => {
         description.textContent = "Pierre Hermé is known for his creative and innovative take on French pastries, especially macarons and cakes. He is one of the most famous pâtissiers in Paris.";
         reservation.textContent = "Reservation required? NO";
         hours.textContent = "Opening Hours: Monday to Saturday 10:00 AM - 7:00 PM, Sunday 10:00 AM - 6:00 PM";
-
-
-
       
       } else if (link.id === "bouillonchartier") {
       title.textContent = "Bouillon Chartier";
@@ -268,12 +258,58 @@ links.forEach(link => {
       hours.textContent = "Opening Hours: Wed–Fri 12:00 PM–10:00 PM; Sat–Sun 11:30 AM–10:00 PM; closed Mon–Tue";
   
       }
+      
+      else if (link.id === "eiffeltower") {
+        title.textContent = "Eiffel Tower";
+        location.textContent = "Location: Champ de Mars, 5 Av. Anatole France, 75007 Paris";
+        description.textContent = "Paris’ most iconic landmark, built in 1889 for the World’s Fair. Designed by Gustave Eiffel, it's a symbol of architectural innovation and offers panoramic views from its observation decks.";
+        hours.textContent = "Opening Hours: Daily 9:00 AM–12:45 AM (last elevator 11:45 PM)";
+        accessAndPrice.textContent = "Access: YES – Elevator or stairs available. Tickets start at ~€11.80 (stairs to 2nd floor) to ~€29.40 (elevator to summit). Advance booking strongly recommended.";
+        tips.textContent = "TIP: Go early or late to avoid long lines. The summit offers the best views, but the 2nd floor is less crowded and still stunning.";
+      } else if (link.id === "notredame") {
+      title.textContent = "Notre-Dame Cathedral";
+      location.textContent = "Location: 6 Parvis Notre-Dame – Pl. Jean-Paul II, 75004 Paris";
+      description.textContent = "A masterpiece of Gothic architecture begun in 1163. Known for its flying buttresses, rose windows, and role in Victor Hugo’s 'The Hunchback of Notre-Dame'.";
+      hours.textContent = "Opening Hours: Expected reopening in December 2024";
+      accessAndPrice.textContent = "Access: NOT YET – Exterior viewing and nearby exhibits only. Entry to interior will be free when reopened; tower access may have a fee (~€10–€15).";
+      tips.textContent = "TIP: Visit the nearby Archaeological Crypt and Sainte-Chapelle to explore medieval Paris.";
+    } else if (link.id === "saintechapelle") {
+      title.textContent = "Sainte-Chapelle";
+      location.textContent = "Location: 10 Bd du Palais, 75001 Paris (within the Palais de Justice)";
+      description.textContent = "Built in 1248, this royal chapel is renowned for its 15-meter-high stained glass windows depicting over 1,000 biblical scenes. A Gothic jewel.";
+      hours.textContent = "Opening Hours: Daily 9:00 AM–7:00 PM (last entry 40 min before closing)";
+      accessAndPrice.textContent = "Access: YES – Tickets ~€13. Entry is free for EU residents under 26. Security check required.";
+      tips.textContent = "TIP: Visit in the morning for the best natural light. Combine with a Conciergerie visit nearby.";
+    } else if (link.id === "arcdetriomphe") {
+      title.textContent = "Arc de Triomphe";
+      location.textContent = "Location: Place Charles de Gaulle, 75008 Paris";
+      description.textContent = "Commissioned by Napoleon in 1806, this monumental arch honors those who fought for France. It offers a 360° view from the top over the Champs-Élysées and beyond.";
+      hours.textContent = "Opening Hours: Daily 10:00 AM–11:00 PM";
+      accessAndPrice.textContent = "Access: YES – Tickets ~€13. Free for EU residents under 26. Elevator available for those with reduced mobility.";
+      tips.textContent = "TIP: Use the underground passage to avoid traffic. Great at sunset or when the Eiffel Tower sparkles.";
+    } else if (link.id === "palaisgarnier") {
+      title.textContent = "Palais Garnier";
+      location.textContent = "Location: Pl. de l'Opéra, 75009 Paris";
+      description.textContent = "A 19th-century opera house blending baroque, classical, and Renaissance styles. The inspiration for 'The Phantom of the Opera', it features a grand marble staircase and Chagall ceiling.";
+      hours.textContent = "Opening Hours: Daily 10:00 AM–5:00 PM (closed during performances)";
+      accessAndPrice.textContent = "Access: YES – Self-guided tour ~€15; guided tours ~€20+. Entry is free for under 12s and EU residents under 26.";
+      tips.textContent = "TIP: If you're into performance, check for tickets — even last-minute seats can be magical.";
+    } else if (link.id === "luxembourgpalace") {
+      title.textContent = "Luxembourg Palace";
+      location.textContent = "Location: 15 Rue de Vaugirard, 75006 Paris (inside Luxembourg Gardens)";
+      description.textContent = "Built in 1612 for Marie de’ Medici, this palace now houses the French Senate. Its picturesque gardens are a favorite local escape.";
+      hours.textContent = "Opening Hours: Gardens open daily from dawn to dusk (varies seasonally)";
+      accessAndPrice.textContent = "Access: Palace – NO (not open to the public); Gardens – YES, free entry.";
+      tips.textContent = "TIP: Ideal spot for reading, people-watching, or sailing toy boats. Grab a snack from the garden kiosks.";
+}
+
+
   
 
   });
 
   link.addEventListener("mouseleave", () => {
-    foodImage.style.opacity = 1;
+    activeImage.style.opacity = 1;
     overlay.style.opacity = 0;
   });
 });
