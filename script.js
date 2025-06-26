@@ -1,4 +1,37 @@
 
+//SCROLL SPEED TOP AND BOTTOM FOR ALL PAGES///**************************************************/
+  let scrollSpeed = 5; //to declare a variable for the scroll speed
+  let scrollInterval = null;
+
+  window.addEventListener('mousemove', (e) => {
+    const distanceFromTop = e.clientY;
+    const distanceFromBottom = window.innerHeight - e.clientY;
+    const threshold = 150;
+
+    clearInterval(scrollInterval);
+
+    if (distanceFromTop < threshold) {
+      scrollInterval = setInterval(() => {
+        window.scrollBy(0, -scrollSpeed);
+      }, 16);
+    } else if (distanceFromBottom < threshold) {
+      scrollInterval = setInterval(() => {
+        window.scrollBy(0, scrollSpeed);
+      }, 16);
+    }
+  });
+
+  window.addEventListener('mouseleave', () => {
+    clearInterval(scrollInterval);
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    const y = e.clientY;
+    if (y > threshold && y < window.innerHeight - threshold) {
+      clearInterval(scrollInterval);
+    }
+  });
+
 //INDEX PAGE LOGIC************************************************************************//
 
 //Adding change to style when hoving over any button in class="indexTopicButton"//
@@ -56,74 +89,199 @@ const patisserie = document.getElementById("patisserie");
 
 if(boulangerie && foodImage){
 boulangerie.addEventListener("mouseover", ()=>{
-    foodImage.src = "imgs/Boulangerie.jpg";
+    foodImage.src = "imgs/squareboulangerie.jpg";
 });
 
 boulangerie.addEventListener("mouseout", ()=>{
-    foodImage.src = "imgs/paris-cafe.jpg";
+    foodImage.src = "imgs/foodGeneral.jpg";
 })
 };
 
 if(coffee && foodImage){
 coffee.addEventListener("mouseover", ()=>{
-    foodImage.src = "imgs/coffee.jpg";
+    foodImage.src = "imgs/squarecoffee.jpg";
 });
 
 coffee.addEventListener("mouseout", ()=>{
-    foodImage.src = "imgs/paris-cafe.jpg";
+    foodImage.src = "imgs/foodGeneral.jpg";
 })
 };
 
 if(restaurant && foodImage){
 restaurant.addEventListener("mouseover", ()=>{
-    foodImage.src = "imgs/laMaisonRose.jpg";
+    foodImage.src = "imgs/squarebistro.jpg";
 });
 
 restaurant.addEventListener("mouseout", ()=>{
-    foodImage.src = "imgs/paris-cafe.jpg";
+    foodImage.src = "imgs/foodGeneral.jpg";
 })
 };
 
 if(patisserie && foodImage){
 patisserie.addEventListener("mouseover", ()=>{
-    foodImage.src = "imgs/patisserie.jpg";
+    foodImage.src = "imgs/squarepatisserie.jpg";
 });
 
 patisserie.addEventListener("mouseout", ()=>{
-    foodImage.src = "imgs/paris-cafe.jpg";
+    foodImage.src = "imgs/foodGeneral.jpg";
 })
 };
 
 
-  let scrollSpeed = 5; //to declare a variable for the scroll speed
-  let scrollInterval = null;
+//LOGIC FOR FACT CARDS APPEARING ON HOVER - CHANGING CONTENT//
 
-  window.addEventListener('mousemove', (e) => {
-    const distanceFromTop = e.clientY;
-    const distanceFromBottom = window.innerHeight - e.clientY;
-    const threshold = 100;
+const overlay = document.querySelector(".overlay");
+//const foodImage = document.getElementById("foodImage");//
 
-    clearInterval(scrollInterval);
+const links = document.querySelectorAll(".submenu li a"); // point to anchor elements directly
+links.forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    foodImage.style.opacity = 0.3;
+    overlay.style.opacity = 1;
 
-    if (distanceFromTop < threshold) {
-      scrollInterval = setInterval(() => {
-        window.scrollBy(0, -scrollSpeed);
-      }, 16);
-    } else if (distanceFromBottom < threshold) {
-      scrollInterval = setInterval(() => {
-        window.scrollBy(0, scrollSpeed);
-      }, 16);
-    }
+    const title = document.getElementById("title");
+    const location = document.getElementById("location");
+    const description = document.getElementById("description");
+    const near = document.getElementById("near");
+    const reservation = document.getElementById("reservation");
+    const hours = document.getElementById("hours");
+
+    
+
+    if (link.id === "dupain") {
+    title.textContent = "Du Pain et des Idées";
+    location.textContent = "Location: 34 Rue Yves Toudic, 75010 Paris";
+    description.textContent = "A historic, beautifully preserved boulangerie (dating to 1875) famed for its artisanal breads (like Pain des Amis) and inventive pastries (e.g., pistachio‑chocolate escargots), set beneath a stunning glass ceiling.";
+    reservation.textContent = "Reservation required? NO";
+    hours.textContent = "Opening Hours: Monday to Friday  around 7:00AM to 8:00PM; closed Saturday & Sunday";
+
+    } else if (link.id === "grenierapain") {
+    title.textContent = "Le Grenier à Pain (Montmartre)";
+    location.textContent = "Location: 38 Rue des Abbesses, 75018 Paris";
+    description.textContent = "Award‑winning Montmartre bakery known for its classic baguettes, croissants and pâtisseries. No indoor seating, but beloved for top-tier quality & cozy neighborhood vibe.";
+    reservation.textContent = "Reservation required? NO";
+    hours.textContent = "Opening Hours: Thursday to Monday 7:30 AM–8:00 PM; closed Tuesday & Wednesday";
+
+    } else if (link.id === "utopie") {
+      title.textContent = "Boulangerie Utopie";
+      location.textContent = "Location: 20 Rue Jean‑Pierre Timbaud, 75011 Paris";
+      description.textContent = "A creative artisan bakery with long‑fermentation loaves and pastries—recent winner of Paris’s best traditional baguette award in 2024. Excellent croissants, sourdoughs, tarts.";
+      reservation.textContent = "Reservation required? NO";
+      hours.textContent = "Opening Hours: Tuesday to Sunday 7:00 AM–8:00 PM; closed Monday";
+
+      } else if (link.id === "lacafeotheque") {
+        title.textContent = "La Caféothèque";
+        location.textContent = "Location: 52 Rue de l’Hôtel de Ville, 75004 Paris";
+        near.textContent = "Near: Hôtel de Ville / Île de la Cité";
+        description.textContent = "Pioneering specialty coffee shop in Paris since 2005, roasting beans onsite from around the globe. Cozy multi-room setting, ‘Coffeeology’ workshops, and expert flat whites.";
+        reservation.textContent = "Reservation required? NO";
+        hours.textContent = "Opening Hours: Daily 8 AM–8 PM";
+
+      }else if (link.id === "cafecoutume") {
+        title.textContent = "Café Coutume";
+        location.textContent = "Location: 47 Rue de Babylone, 75007 Paris";
+        near.textContent = "Near: Saint‑Germain‑des‑Prés / Musée d’Orsay";
+        description.textContent = "French-Australian specialty pioneer co-founded in 2011. Expertly roasted beans, precision espresso & filter brewing, with solid breakfast/brunch fare.";
+        reservation.textContent = "Reservation required? NO";
+        hours.textContent = "Opening Hours: Daily 8 AM–7 PM";
+      
+
+      } else if (link.id === "tenbelles") {
+        title.textContent = "Ten Belles";
+        location.textContent = "Location: 10 Rue de la Grange aux Belles, 75010 Paris";
+        near.textContent = "Near: Canal Saint‑Martin";
+        description.textContent = "Busy, friendly canal‑side café known for reliable espresso & filter brews, fresh baked goods, and a great relaxed vibe.";
+        reservation.textContent = "Reservation required? NO";
+        hours.textContent = "Opening Hours: Daily 8 AM–6 PM";
+      
+
+
+ 
+    
+    
+    
+    } else if (link.id === "carette") {
+      title.textContent = "Carette";
+      location.textContent = "Location: 4 Place du Trocadéro, 75016 Paris";
+      near.textContent = "Near: Eiffel Tower";
+      description.textContent = "Carette is a luxurious Parisian pâtisserie serving exquisite macarons, pastries, and cakes. Its beautiful setting near the Trocadéro makes it a favorite for both locals and tourists.";
+      reservation.textContent = "Reservation required? NO";
+      hours.textContent = "Opening Hours: Monday to Sunday 9:00 AM - 7:00 PM";
+
+
+    } else if (link.id === "berthillon") {
+        title.textContent = "Berthillon";
+        location.textContent = "Location: 29-31 Rue Saint-Louis en l'Île, 75004 Paris";
+        description.textContent = "Berthillon is Paris’ most famous ice cream parlor, known for its high-quality, artisanal ice creams and sorbets. Located on the Île Saint-Louis, it's a must-visit for dessert lovers seeking authentic French flavors.";
+        reservation.textContent = "Reservation required? NO";
+        hours.textContent = "Opening Hours: Monday to Sunday: 10:00 AM - 7:00 PM";
+
+      } else if (link.id === "angelina") {
+        title.textContent = "Madamoiselle Angelina";
+        location.textContent = "Location: 226 Rue de Rivoli, 75001 Paris";
+        near.textContent = "Near: Louvre Museum";
+        description.textContent = "Madamoiselle Angelina is a historic café known for its decadent hot chocolate ('L'Africain') and luxurious pastries. It has been a favorite of royalty and celebrities since 1903.";
+        reservation.textContent = "Reservation required? YES";
+        hours.textContent = "Opening Hours: Monday to Sunday 7:30 AM - 7:30 PM";
+
+      } else if (link.id === "pierreherme") {
+        title.textContent = "Pierre Hermé";
+        location.textContent = "Location: 72 Rue Bonaparte, 75006 Paris";
+        near.textContent = "Near: Saint-Germain-des-Prés";
+        description.textContent = "Pierre Hermé is known for his creative and innovative take on French pastries, especially macarons and cakes. He is one of the most famous pâtissiers in Paris.";
+        reservation.textContent = "Reservation required? NO";
+        hours.textContent = "Opening Hours: Monday to Saturday 10:00 AM - 7:00 PM, Sunday 10:00 AM - 6:00 PM";
+
+
+
+      
+      } else if (link.id === "bouillonchartier") {
+      title.textContent = "Bouillon Chartier";
+      location.textContent = "Location: 7 Rue du Faubourg Montmartre, 75009 Paris";
+      near.textContent = "Near: Opéra Garnier";
+      description.textContent = "Historic Art-Nouveau 'bouillon' restaurant (since 1896), offering affordable, classic French dishes in a grand, Belle-Époque dining hall—tables shared, orders scribbled on paper tablecloths.";
+      reservation.textContent = "Reservation required? NO";
+      hours.textContent = "Opening Hours: Daily 11:00 AM–11:30 PM";
+
+      } else if (link.id === "lafontainedemars") {
+      title.textContent = "La Fontaine de Mars";
+      location.textContent = "Location: 129 Rue Saint-Dominique, 75007 Paris";
+      near.textContent = "Near: Eiffel Tower";
+      description.textContent = "A charming, family-run bistro dating from 1908, offering classic French cuisine (like cassoulet and duck confit) in a warm, wood-panelled dining room just steps from the Eiffel Tower.";
+      reservation.textContent = "Reservation required? YES (strongly recommended)";
+      hours.textContent = "Opening Hours: Tuesday to Saturday 12:00 PM–2:00 PM & 7:00 PM–10:00 PM; closed Sun & Mon";
+    
+      } else if (link.id === "chezfernand") {
+      title.textContent = "Chez Fernand (Rue Christine)";
+      location.textContent = "Location: 9 Rue Christine, 75006 Paris";
+      near.textContent = "Near: Saint-Germain-des-Prés";
+      description.textContent = "A traditional French bistrot in the Left Bank with vaulted brick ceilings and a huge wine list, serving homemade terroir dishes in a relaxed, friendly setting.";
+      reservation.textContent = "Reservation required? YES (recommended)";
+      hours.textContent = "Opening Hours: Monday to Sunday 12:00 PM–2:30 PM & 7:00 PM–11:00 PM";
+
+      } else if (link.id === "lamaisonrose") {
+      title.textContent = "La Maison Rose";
+      location.textContent = "Location: 2 Rue de l’Abreuvoir, 75018 Paris";
+      near.textContent = "Near: Montmartre (Sacré‑Cœur & Place du Tertre)";
+      description.textContent = "An iconic pastel‑pink café and restaurant since 1908, set on a charming cobbled corner. Once a hub for Picasso and Utrillo, it serves a short, seasonal menu blending French & Italian comfort food in a cozy, art‑filled space.";
+      reservation.textContent = "Reservation required? YES (highly recommended)";
+      hours.textContent = "Opening Hours: Wed–Fri 12:00 PM–10:00 PM; Sat–Sun 11:30 AM–10:00 PM; closed Mon–Tue";
+  
+      }
+  
+
   });
 
-  window.addEventListener('mouseleave', () => {
-    clearInterval(scrollInterval);
+  link.addEventListener("mouseleave", () => {
+    foodImage.style.opacity = 1;
+    overlay.style.opacity = 0;
   });
+});
 
-  window.addEventListener('mousemove', (e) => {
-    const y = e.clientY;
-    if (y > 50 && y < window.innerHeight - 50) {
-      clearInterval(scrollInterval);
-    }
-  });
+
+
+
+
+
+
 

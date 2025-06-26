@@ -20,13 +20,23 @@ Paris balloons - Photo by <a href="https://unsplash.com/@theparisphotographer?ut
       
       
 CUISINE PAGE:
+General Food Photo by <a href="https://unsplash.com/@jamesharris_photography?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jim Harris</a> on <a href="https://unsplash.com/photos/bread-near-wine--otM7Ee0gys?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
 
-Boulangerie Photo by <a href="https://unsplash.com/@ferhadd?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Farhad Ibrahimzade</a> on <a href="https://unsplash.com/photos/brown-bread-on-clear-glass-display-counter-I0Vb0DejVZ0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+Boulangerie Photo by Photo by <a href="https://unsplash.com/@olgaserjantu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Olga Serjantu</a> on <a href="https://unsplash.com/photos/brown-bread-on-white-paper-l0GfoEPgQ8A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
 
 Coffee Photo by <a href="https://unsplash.com/@jordanplihal?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Jordan Plihal</a> on <a href="https://unsplash.com/photos/clear-glass-cup-beside-white-ceramic-plate-with-bread-bcUxBx6mIEs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
 Restaurant Photo by <a href="https://unsplash.com/@virgoval?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Valerie Cervantes</a> on <a href="https://unsplash.com/photos/a-group-of-people-standing-outside-of-a-pink-building-SkIBX8PIsOc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
 
-Patisserie Photo by <a href="https://unsplash.com/@xxii?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Oliver-Timm Haarmann</a> on <a href="https://unsplash.com/photos/strawberry-and-blueberry-pie-on-brown-wooden-table-p6OLZPnq810?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+Patisserie Photo by <a href="https://unsplash.com/@ulysse_pcl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ulysse Pointcheval</a> on <a href="https://unsplash.com/photos/strawberry-and-blackberry-on-clear-glass-display-counter-1WmlAiYgnoI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+Photo by <a href="https://unsplash.com/@donhu06?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Do Nhu</a> on <a href="https://unsplash.com/photos/man-in-white-dress-shirt-and-black-pants-standing-in-front-of-store--CC1HQ0O8YY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
+      
+square boulangerie Photo by <a href="https://unsplash.com/@devetpan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Siebe Warmoeskerken</a> on <a href="https://unsplash.com/photos/pantry-display-counter-R3iAcQxylmE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+square bistro Photo by <a href="https://unsplash.com/@abrahamicjourney?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sam Choi</a> on <a href="https://unsplash.com/photos/chez-francis-a-restaurant-in-paris-is-pictured-VCg-2IkkwKI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
