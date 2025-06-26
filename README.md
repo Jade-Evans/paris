@@ -39,4 +39,17 @@ Photo by <a href="https://unsplash.com/@donhu06?utm_content=creditCopyText&utm_m
 square boulangerie Photo by <a href="https://unsplash.com/@devetpan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Siebe Warmoeskerken</a> on <a href="https://unsplash.com/photos/pantry-display-counter-R3iAcQxylmE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 
 square bistro Photo by <a href="https://unsplash.com/@abrahamicjourney?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sam Choi</a> on <a href="https://unsplash.com/photos/chez-francis-a-restaurant-in-paris-is-pictured-VCg-2IkkwKI?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+ARCHITECTURE IMAGE CREDITS:
+
+1. Eiffel Tower Photo by <a href="https://unsplash.com/@devetpan?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Siebe Warmoeskerken</a> on <a href="https://unsplash.com/photos/eiffel-tower-n9hyG4ID-Rg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
+2. Notre Dame Photo by Adrienn: https://www.pexels.com/photo/white-concrete-building-1460145/
+      
+3. Saint-Chapelle Photo by Design Diva: https://www.pexels.com/photo/stunning-stained-glass-of-sainte-chapelle-paris-32591352/
+
+4. Arc de Triomphe - Photo by Pixabay: https://www.pexels.com/photo/arc-de-triomphe-paris-2344/
+5. Palais Garnier - Photo by Margerretta: https://www.pexels.com/photo/angel-statue-on-building-548083/
+6. Luxembourg Palace - Photo by Yu Han Huang: https://www.pexels.com/photo/luxembourg-palace-and-gardens-on-a-bright-day-32467058/
+
       
