@@ -53,4 +53,13 @@ ARCHITECTURE IMAGE CREDITS:
 6. Luxembourg Palace - Photo by Yu Han Huang: https://www.pexels.com/photo/luxembourg-palace-and-gardens-on-a-bright-day-32467058/
 7. Sacre Coeur Photo by Paul Gourmaud: https://www.pexels.com/photo/crowd-of-tourists-by-the-basilica-of-the-sacred-heart-of-montmartre-in-paris-23858887/
 7. Architecture default Photo by Marvin Nast: https://www.pexels.com/photo/wooden-spiral-stairs-21038401/
+
+MUSEUMS AND CULTURE PAGE
+
+1. Louvre Photo by Lina Kivaka: https://www.pexels.com/photo/long-lines-in-front-of-louvre-museum-3989820/
+2. D'Orsay Photo by Leander: https://www.pexels.com/photo/clock-on-wall-in-musee-dorsay-in-paris-18373826/
+3. Pompidou Photo by Shvets Anna: https://www.pexels.com/photo/3-white-air-pipes-photo-2574528/
+4. Catacombs Photo by Fernanda W. Corso: https://www.pexels.com/photo/eerie-skulls-in-paris-catacombs-underground-32416929/
+5. L'Orangerie Photo by Adrien Olichon: https://www.pexels.com/photo/woman-in-blue-and-white-polka-dot-dress-sitting-on-gray-concrete-bench-9329052/
+6. Musee de l'Arte Moderne de Paris Photo by <a href="https://unsplash.com/@barrydtalleyduke3?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Barry Talley</a> on <a href="https://unsplash.com/photos/a-building-with-a-sign-that-says-museum-dart-moderne-de-paris-CLIFsjOZDUg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       

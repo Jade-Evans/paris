@@ -103,6 +103,12 @@ const categories = [
   { id: "arcdetriomphe", img: "imgs/arc-de-triomphe.jpg"},
   { id: "palaisgarnier", img: "imgs/palais-garnier.jpg"},
   { id: "luxembourgpalace", img: "imgs/luxembourg-palace.jpg"},
+  { id: "louvre", img: "imgs/louvre.jpg"},
+  { id: "dorsay", img: "imgs/dorsay.jpg"},
+  { id: "pompidou", img: "imgs/pompidou.jpg"},
+  { id: "orangerie", img: "imgs/orangerie.jpg"},
+  { id: "moderne", img: "imgs/moderne.jpg"}, 
+  { id: "catacombs", img: "imgs/catacombs.jpg"},
 ]
 //3. Create looped function to go through each item in category and assign correct image when hover on/off//
 categories.forEach(({id, img})=>{//this is shorthand for: const id = category.id;const img = category.img;// start of forEach callback
