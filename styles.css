@@ -333,6 +333,7 @@ html, body{
     max-width: 1200px;
     align-items: stretch;
     justify-content: flex-start;
+    flex-wrap: wrap;
     border: blue 2px dotted; 
 }
 

@@ -80,6 +80,9 @@ exploreEntertainmentButton.addEventListener("click",()=>{
 })
 };
 //FOOD PAGE LOGIC**************************************************************************//
+//LOGIC TO CHANGE IMAGE ON HOVER//
+
+//1. Assign variables using ids:
 const activeImage = document.getElementById("activeImage");
 const boulangerie = document.getElementById("boulangerie");
 const coffee = document.getElementById("coffee");
@@ -88,7 +91,7 @@ const patisserie = document.getElementById("patisserie");
 const eiffeltower = document.getElementById("eiffeltower");
 const notredame = document.getElementById("notredame");
 const saintechapelle = document.getElementById("saintechapelle");
-
+//2. Create an array to group together variable and their images//
 const categories = [
   { id: "boulangerie", img: "imgs/squareboulangerie.jpg"},
   { id: "coffee", img: "imgs/squarecoffee.jpg"},
@@ -101,7 +104,7 @@ const categories = [
   { id: "palaisgarnier", img: "imgs/palais-garnier.jpg"},
   { id: "luxembourgpalace", img: "imgs/luxembourg-palace.jpg"},
 ]
-
+//3. Create looped function to go through each item in category and assign correct image when hover on/off//
 categories.forEach(({id, img})=>{//this is shorthand for: const id = category.id;const img = category.img;// start of forEach callback
     const element = document.getElementById(id);//element is the "placeholder" for eiffel tower etc. its the same as assigning const boulangerie = document.getElementById(boulangerie) but for all in categories. 
     if(element && activeImage){//start of if block
@@ -119,13 +122,27 @@ categories.forEach(({id, img})=>{//this is shorthand for: const id = category.id
 //LOGIC FOR FACT CARDS APPEARING ON HOVER - CHANGING CONTENT//
 
 const overlay = document.querySelector(".overlay");
-//const activeImage = document.getElementById("activeImage");//
 
 const links = document.querySelectorAll(".submenu li a, .category-item h3"); // point to anchor elements directly
 links.forEach(link => {
-  link.addEventListener("mouseenter", () => {
-    activeImage.style.opacity = 0.3;
-    overlay.style.opacity = 1;
+  let fadeTimer;
+  link.addEventListener("mouseenter", ()=>{
+    if(!link.id)return; //logic for the h3s on food pages//
+    activeImage.style.opacity = 1; //starts on full opacity
+
+    fadeTimer = setTimeout(()=>{
+      overlay.style.opacity = 1;
+      activeImage.style.opacity = 0.3;
+    },300);
+    
+  });
+
+  link.addEventListener("mouseout", ()=>{
+    clearTimeout(fadeTimer);
+    overlay.style.opacity = 0;
+    activeImage.style.opacity = 1;
+  });
+
 
     const title = document.getElementById("title");
     const location = document.getElementById("location");
@@ -299,7 +316,7 @@ links.forEach(link => {
     activeImage.style.opacity = 1;
     overlay.style.opacity = 0;
   });
-});
+
 
 
 
