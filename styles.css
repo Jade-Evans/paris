@@ -333,13 +333,11 @@ html, body{
     max-width: 1200px;
     align-items: stretch;
     justify-content: flex-start;
-    flex-wrap: wrap;
-    border: blue 2px dotted; 
+    flex-wrap: wrap; 
 }
 
 .left-side{
-    flex:1; /*sorts ratio between LH and RH side*/
-    border: blue 2px solid;   
+    flex:1; /*sorts ratio between LH and RH side*/  
     display: flex;
     padding: 20px;
 
@@ -399,7 +397,6 @@ html, body{
     height:680px;
     justify-content: flex-end;
     align-items: stretch;
-    border: 2px red dotted;
 }
 
 #activeImage{

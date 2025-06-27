@@ -62,4 +62,15 @@ MUSEUMS AND CULTURE PAGE
 4. Catacombs Photo by Fernanda W. Corso: https://www.pexels.com/photo/eerie-skulls-in-paris-catacombs-underground-32416929/
 5. L'Orangerie Photo by Adrien Olichon: https://www.pexels.com/photo/woman-in-blue-and-white-polka-dot-dress-sitting-on-gray-concrete-bench-9329052/
 6. Musee de l'Arte Moderne de Paris Photo by <a href="https://unsplash.com/@barrydtalleyduke3?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Barry Talley</a> on <a href="https://unsplash.com/photos/a-building-with-a-sign-that-says-museum-dart-moderne-de-paris-CLIFsjOZDUg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+7. Art default image (Rodin) Photo by Alê Perê: https://www.pexels.com/photo/man-sculpture-in-deep-thought-and-contemplation-13437340/
+
+GARDENS AND WALKS
+1. Montmartre Photo by <a href="https://unsplash.com/@bastien_nvs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Bastien Nvs</a> on <a href="https://unsplash.com/photos/people-walking-on-sidewalk-near-buildings-during-daytime-qMenUAPuq-A?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+2. Promenade Plantee Photo by <a href="https://unsplash.com/@dreamlandscape?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Dreamland Scape</a> on <a href="https://unsplash.com/photos/a-path-through-a-garden-with-lots-of-flowers-M3XXlfHhzXs?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+3. Jardin des Plantes
+4. Rue Cremieux Photo by Suzanne Appealin: https://www.pexels.com/photo/pastel-colors-of-concrete-buildings-with-windows-near-the-street-6439011/
+5. Latin Quartier Photo by Arda Kaykısız : https://www.pexels.com/photo/street-view-of-the-pantheon-in-paris-30642772/    
+6. seine Photo by <a href="https://unsplash.com/@ettocl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Léonard Cotte</a> on <a href="https://unsplash.com/photos/bridge-during-night-time-R5scocnOOdM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+7. Champs-Elysee  Photo by Pixabay: https://www.pexels.com/photo/crowded-street-with-cars-along-arc-de-triomphe-161901/
+8.  default garden Photo by <a href="https://unsplash.com/@calibrutz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Cali Brutz</a> on <a href="https://unsplash.com/photos/a-statue-of-a-person-and-a-ferris-wheel-in-the-background-jMdDbo7Hgi0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
