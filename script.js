@@ -569,7 +569,29 @@ document.querySelectorAll(".category-item").forEach((category)=> {
   }//closes the actions in the whole if...else statement 
 });//closes the actions happening for all items in the .category-items query selector
 
+//CREATE LOGIC SO THAT MESSAGE APPEARS WHEN HOVER OVER A PLACE-CHECKBOX//
 
+document.querySelectorAll(".place-checkbox").forEach((box)=>{
+    let checkWishlist;//must be defined outside of mouseover/mouseout so it works for both otherwise only works on one. 
+    box.addEventListener("mouseover", ()=>{
+    if(!checkWishlist){
+    checkWishlist = document.createElement("div");
+    checkWishlist.textContent = "add to itinerary wishlist";
+    checkWishlist.classList.add("wishlist");
+    box.parentElement.appendChild(checkWishlist);
+    checkWishlist.style.opacity = 0;//for immediate fade, use opacity 0 to 1 but not the timer (this delays).
+    }
+    checkWishlist.style.opacity = 1;
+    
+  });
+  box.addEventListener("mouseout", ()=>{
+    if(checkWishlist){
+      checkWishlist.style.opacity = 0;
+      }
+  });
+
+
+});
 
 
 
