@@ -115,7 +115,11 @@ const categories = [
   { id: "plantes", img: "imgs/jardindesplantes.jpg" },
   { id: "rue-cremieux", img: "imgs/ruecremieux.jpg" },
   { id: "latin", img: "imgs/latinquartier.jpg" },
-  { id: "seine", img: "imgs/seine.jpg" }
+  { id: "seine", img: "imgs/seine.jpg" },
+  { id: "jazzbars", img: "imgs/jazz.jpg"},
+  { id: "cabaretshows", img: "imgs/MoulinRouge.jpg"},
+  { id: "nightdining", img: "imgs/dining.jpg"},
+  { id: "iconicnights", img: "imgs/eiffelnight.jpg"}
 ]
 //3. Create looped function to go through each item in category and assign correct image when hover on/off//
 categories.forEach(({id, img})=>{//this is shorthand for: const id = category.id;const img = category.img;// start of forEach callback
@@ -257,6 +261,14 @@ links.forEach(link => {
     description.textContent = "A traditional French bistrot in the Left Bank with vaulted brick ceilings and a huge wine list, serving homemade terroir dishes in a relaxed, friendly setting.";
     reservation.textContent = "Reservation required? YES (recommended)";
     hours.textContent = "Opening Hours: Monday to Sunday 12:00 PM–2:30 PM & 7:00 PM–11:00 PM";
+
+    } else if (link.id === "leprocope") {
+    title.textContent = "Le Procope – Paris’s Oldest Café";
+    location.textContent = "Location: 13 Rue de l'Ancienne Comédie, 75006 Paris";
+    description.textContent = "Historic café dating back to 1686, serving classic French dishes. A spot once frequented by Voltaire and Rousseau.";
+    reservation.textContent = "Reservation required? YES";
+    hours.textContent = "Opening Hours: 11:00 AM – 12:00 AM (Every day)";
+    price.textContent = "Price Range: €25 - €50 per person";
 
     } else if (link.id === "lamaisonrose") {
     title.textContent = "La Maison Rose";
@@ -402,8 +414,125 @@ links.forEach(link => {
     location.textContent = "Location: Central Paris — both banks";
     description.textContent = "From cobblestone quays to bouquiniste stalls, a walk along the Seine blends timeless beauty, bridges, and poetic calm — day or night.";
     lookout.textContent = "Look out for: Booksellers, sunset from Pont Alexandre III, and Notre-Dame glimpses.";
-    }   
-   });
+    } else if (link.id === "paradislatin") {
+    title.textContent = "Paradis Latin Dinner Show";
+    location.textContent = "Location: 28 Rue du Cardinal Lemoine, 75005 Paris";
+    description.textContent = "Parisian cabaret offering an elegant dinner and dazzling live show in a stunning venue.";
+    reservation.textContent = "Reservation required? YES";
+    hours.textContent = "Opening Hours: Shows at 8:30 PM, dinner starts at 7:00 PM.";
+    price.textContent = "Price Range: €85 - €160 per person (depending on dinner options)";
+    } else if (link.id === "moulinrouge") {
+    title.textContent = "Moulin Rouge";
+    location.textContent = "Location: 82 Boulevard de Clichy, 75018 Paris";
+    description.textContent = "World-famous cabaret known for its lavish performances, extravagant costumes, and unforgettable atmosphere.";
+    reservation.textContent = "Reservation required? YES";
+    hours.textContent = "Opening Hours: Shows at 9:00 PM and 11:00 PM.";
+    price.textContent = "Price Range: €87 - €250 per person (depending on package)";
+    } else if (link.id === "ducdeslombards") {
+    title.textContent = "Duc des Lombards – Renowned Jazz Institution";
+    location.textContent = "Location: 42 Rue des Lombards, 75001 Paris";
+    description.textContent = "A legendary jazz club offering intimate performances from world-class artists.";
+    reservation.textContent = "Reservation required? YES";
+    hours.textContent = "Opening Hours: 7:30 PM – 2:00 AM (Every day)";
+    price.textContent = "Price Range: €20 - €50 per ticket (depending on the artist)";
+    } else if (link.id === "sunsetsunside") {
+    title.textContent = "Sunset Sunside – Twin Jazz Venues in the Heart of Paris";
+    location.textContent = "Location: 60 Rue des Lombards, 75001 Paris";
+    description.textContent = "An iconic jazz bar offering nightly performances with a cozy atmosphere.";
+    reservation.textContent = "Reservation required? YES";
+    hours.textContent = "Opening Hours: 7:00 PM – 1:00 AM (Every day)";
+    price.textContent = "Price Range: €15 - €40 per ticket";
+    } else if (link.id === "caveaudelahuchette") {
+    title.textContent = "Le Caveau de la Huchette – Historic Jazz Cellar";
+    location.textContent = "Location: 5 Rue de la Huchette, 75005 Paris";
+    description.textContent = "A historic jazz venue with a 1940s swing vibe. Great for both music lovers and dancers.";
+    reservation.textContent = "Reservation required? YES";
+    hours.textContent = "Opening Hours: 9:00 PM – 2:00 AM (Every day)";
+    price.textContent = "Price Range: €10 - €30 per ticket";
+    } else if (link.id === "balblomet") {
+    title.textContent = "Le Bal Blomet – Vintage Parisian Vibes";
+    location.textContent = "Location: 33 Rue Blomet, 75015 Paris";
+    description.textContent = "Paris’s oldest jazz club, recently revived, offering a blend of classic and contemporary jazz.";
+    reservation.textContent = "Reservation required? YES";
+    hours.textContent = "Opening Hours: 7:30 PM – 1:00 AM (Every day)";
+    price.textContent = "Price Range: €25 - €50 per ticket";
+    }else if (link.id === "lebaronrouge") {
+    title.textContent = "Le Baron Rouge – Iconic Wine Bar";
+    location.textContent = "Location: 1 Rue Théophile Roussel, 75012 Paris";
+    description.textContent = "A charming wine bar with a selection of natural wines and a rustic Parisian vibe. Often packed with locals and visitors alike, it's a cozy spot for an evening glass of wine.";
+    reservation.textContent = "Reservation required? NO";
+    hours.textContent = "Opening Hours: 5:00 PM – 2:00 AM (Every day)";
+    price.textContent = "Price Range: €10 - €30 per glass of wine";
+    } else if (link.id === "leverrevole") {
+    title.textContent = "Le Verre Volé – Wine and Small Plates";
+    location.textContent = "Location: 67 Rue de Lancry, 75010 Paris";
+    description.textContent = "A popular wine bar with an extensive selection of wines paired with delicious small plates of French food. Great for a casual evening.";
+    reservation.textContent = "Reservation required? YES";
+    hours.textContent = "Opening Hours: 6:00 PM – 2:00 AM (Every day)";
+    price.textContent = "Price Range: €12 - €40 per person";
+    } else if (link.id === "leperchoir") {
+    title.textContent = "Le Perchoir – Rooftop Bar with Views";
+    location.textContent = "Location: 14 Rue Crespin du Gast, 75011 Paris";
+    description.textContent = "An iconic rooftop bar offering spectacular views of Paris, perfect for sipping cocktails or wine and soaking in the vibrant atmosphere.";
+    reservation.textContent = "Reservation required? YES";
+    hours.textContent = "Opening Hours: 6:00 PM – 2:00 AM (Every day)";
+    price.textContent = "Price Range: €15 - €30 per drink";
+    } else if (link.id === "terrasshotel") {
+    title.textContent = "Terrass' Hotel Rooftop";
+    location.textContent = "Location: 12-14 Rue Joseph de Maistre, 75018 Paris";
+    description.textContent = "A chic rooftop bar offering panoramic views of Montmartre and the Eiffel Tower, ideal for a sunset drink with a stunning backdrop.";
+    reservation.textContent = "Reservation required? YES";
+    hours.textContent = "Opening Hours: 6:00 PM – 1:00 AM (Every day)";
+    price.textContent = "Price Range: €12 - €35 per drink";
+    } else if (link.id === "shakespearecompany") {
+    title.textContent = "Shakespeare and Company – Literary Haven";
+    location.textContent = "Location: 37 Rue de la Bûcherie, 75005 Paris";
+    description.textContent = "An iconic Parisian bookstore that occasionally hosts evening readings or events, perfect for book lovers seeking a literary night out.";
+    reservation.textContent = "Reservation required? NO";
+    hours.textContent = "Opening Hours: 10:00 AM – 11:00 PM (Every day)";
+    price.textContent = "Price Range: Free entry, events may vary";
+    }else if (link.id === "nighteiffel") {
+    title.textContent = "Eiffel Tower Light Show";
+    location.textContent = "Location: Champ de Mars, 5 Av. Anatole France, 75007 Paris";
+    description.textContent = "Every evening after sunset, the Eiffel Tower sparkles for 5 minutes at the start of each hour — a quintessential Paris moment.";
+    reservation.textContent = "Reservation required? NO (to view from outside)";
+    hours.textContent = "Lighting from dusk to 1:00 AM";
+    price.textContent = "Price: Free to view light show (Elevator access to tower: from €11.80)";
+
+    } else if (link.id === "seinecruise") {
+      title.textContent = "Seine River Cruise";
+      location.textContent = "Location: Boarding from Port de la Bourdonnais or Port de Solférino, various operators";
+      description.textContent = "Experience the magic of Paris from the water — enjoy dinner, live music, or a simple sightseeing cruise along the Seine.";
+      reservation.textContent = "Reservation required? YES";
+      hours.textContent = "Cruises typically depart between 6:00 PM and 10:30 PM";
+      price.textContent = "Price Range: €15 – €100+ depending on cruise type";
+
+    } else if (link.id === "seinebanks") {
+      title.textContent = "Walk Along the Seine";
+      location.textContent = "Location: From Île de la Cité to Eiffel Tower — Right & Left Banks";
+      description.textContent = "Stroll along the UNESCO-listed riverbanks where locals picnic, musicians play, and bridges glow at night — one of the most romantic walks in Paris.";
+      reservation.textContent = "Reservation required? NO";
+      hours.textContent = "Open access 24/7";
+      price.textContent = "Price: Free";
+
+    } else if (link.id === "montmartre") {
+      title.textContent = "Montmartre at Night";
+      location.textContent = "Location: 18th arrondissement — around Place du Tertre and Sacré-Cœur";
+      description.textContent = "Wander cobbled lanes past glowing bistros, artists sketching in the square, and catch panoramic views of the city lit up below.";
+      reservation.textContent = "Reservation required? NO";
+      hours.textContent = "Best enjoyed at sunset through late evening";
+      price.textContent = "Price: Free";
+
+    } else if (link.id === "ilecitestroll") {
+      title.textContent = "Île de la Cité & Île Saint-Louis Stroll";
+      location.textContent = "Location: Central Paris — accessible via Pont Neuf and Pont Saint-Louis";
+      description.textContent = "These two islands offer some of Paris’s oldest streets, quiet courtyards, Notre-Dame views, and peaceful nighttime riverside ambiance.";
+      reservation.textContent = "Reservation required? NO";
+      hours.textContent = "Anytime, ideal just after dusk";
+      price.textContent = "Price: Free";
+    }
+
+  });
 
   link.addEventListener("mouseleave", () => {
     clearTimeout(fadeTimer);

@@ -73,4 +73,10 @@ GARDENS AND WALKS
 6. seine Photo by <a href="https://unsplash.com/@ettocl?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Léonard Cotte</a> on <a href="https://unsplash.com/photos/bridge-during-night-time-R5scocnOOdM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 7. Champs-Elysee  Photo by Pixabay: https://www.pexels.com/photo/crowded-street-with-cars-along-arc-de-triomphe-161901/
 8.  default garden Photo by <a href="https://unsplash.com/@calibrutz?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Cali Brutz</a> on <a href="https://unsplash.com/photos/a-statue-of-a-person-and-a-ferris-wheel-in-the-background-jMdDbo7Hgi0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+
+   ENTERTAINMENT AND NIGHTLIFE IMAGES
+   1. Jazz Photo by Lucas Allmann: https://www.pexels.com/photo/people-performing-on-stage-442540/  
+   2. Dining Photo by <a href="https://unsplash.com/@olimpiaborodiunsplash?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">olimpia campean</a> on <a href="https://unsplash.com/photos/a-wooden-cutting-board-topped-with-lots-of-cheese-8YmAPk1Uq_U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+       
+   4. Eiffel night Photo by <a href="https://unsplash.com/@annahunko?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Anna Hunko</a> on <a href="https://unsplash.com/photos/the-eiffel-tower-lit-up-at-night-CzcRCklTbkE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
       
