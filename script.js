@@ -541,6 +541,33 @@ links.forEach(link => {
   });
 });
 
+//JS LOGIC FOR ADDING CHECKBOXES TO EACH PLACE//
+
+document.querySelectorAll(".category-item").forEach((category)=> {
+  const submenu = category.querySelector(".submenu"); //assign a variable so can check if it exists
+  if(submenu){//execute this code if there is a submenu within the "category"
+    submenu.querySelectorAll("li").forEach((item)=> {//search through each list item
+    const link = item.querySelector("a");//assign variable "link" to the attribute
+    if(!link) return;
+    const checkbox = document.createElement("input");//create the input element
+    checkbox.type = "checkbox"; //assign the type of input aka checkbox
+    checkbox.classList.add("place-checkbox"); //this creates and assigns a new class "place-checkbox" which will be assigned to all items
+    checkbox.dataset.placeId = link.id; //this grabs the existing id of each specific link and relates it to the placeId to be used. 
+    item.appendChild(checkbox); //add the checkbox to the end of item
+  });//closes all the actions happening if there is a submenu. 
+  }else{
+
+    const topicHeading = category.querySelector("h3"); //assigns a variable to the h3s IF no submenu is present in category items
+    if(!topicHeading) return;
+    if(topicHeading){
+    const checkbox = document.createElement("input");//create the input element
+    checkbox.type = "checkbox"; //assign the type of input aka checkbox
+    checkbox.classList.add("place-checkbox"); //this creates and assigns a new class "place-checkbox" which will be assigned to all items
+    checkbox.dataset.placeId = category.id;
+    category.appendChild(checkbox); //this grabs the existing id of each specific link and relates it to the placeId to be used. 
+    };//closes all the actions happening if there is a submenu. 
+  }//closes the actions in the whole if...else statement 
+});//closes the actions happening for all items in the .category-items query selector
 
 
 
