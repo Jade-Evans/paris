@@ -328,15 +328,58 @@ html, body{
 }
 
 /*ITINERARY PAGES--------------------------------------*/
+
+.all-main-content{
+    display: flex;
+    max-width: 1200px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    margin:auto;
+}
+.headings{
+    max-width: 1100px;
+    text-align: center;
+}
+
+.itinerary-image-container{
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width:100%;
+}
+.day h2{
+    text-align: center;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 50px;
+}
+.day h3{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 30px;
+
+}
+
 .itinerary-image{
-    height: 700px;
-    max-height: 100%;
-    width:auto;
+    height: 100%;
+    flex: 1;
+    object-fit: cover;
+    max-width: 33%;
 }
 
 .it-body-of-content{
-    max-width: 1100px;
-    margin:auto;
+    max-width: 100%;
+}
+
+.time-of-day{
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .main-container{

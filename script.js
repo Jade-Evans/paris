@@ -1,36 +1,36 @@
 
 //SCROLL SPEED TOP AND BOTTOM FOR ALL PAGES///**************************************************/
-  let scrollSpeed = 5; //to declare a variable for the scroll speed
-  let scrollInterval = null;
+  // //let scrollSpeed = 5; //to declare a variable for the scroll speed
+  // let scrollInterval = null;
 
-  window.addEventListener('mousemove', (e) => {
-    const distanceFromTop = e.clientY;
-    const distanceFromBottom = window.innerHeight - e.clientY;
-    const threshold = 150;
+  // window.addEventListener('mousemove', (e) => {
+  //   const distanceFromTop = e.clientY;
+  //   const distanceFromBottom = window.innerHeight - e.clientY;
+  //   const threshold = 150;
 
-    clearInterval(scrollInterval);
+  //   clearInterval(scrollInterval);
 
-    if (distanceFromTop < threshold) {
-      scrollInterval = setInterval(() => {
-        window.scrollBy(0, -scrollSpeed);
-      }, 16);
-    } else if (distanceFromBottom < threshold) {
-      scrollInterval = setInterval(() => {
-        window.scrollBy(0, scrollSpeed);
-      }, 16);
-    }
-  });
+  //   if (distanceFromTop < threshold) {
+  //     scrollInterval = setInterval(() => {
+  //       window.scrollBy(0, -scrollSpeed);
+  //     }, 16);
+  //   } else if (distanceFromBottom < threshold) {
+  //     scrollInterval = setInterval(() => {
+  //       window.scrollBy(0, scrollSpeed);
+  //     }, 16);
+  //   }
+  // });
 
-  window.addEventListener('mouseleave', () => {
-    clearInterval(scrollInterval);
-  });
+  // window.addEventListener('mouseleave', () => {
+  //   clearInterval(scrollInterval);
+  // });
 
-  window.addEventListener('mousemove', (e) => {
-    const y = e.clientY;
-    if (y > threshold && y < window.innerHeight - threshold) {
-      clearInterval(scrollInterval);
-    }
-  });
+  // window.addEventListener('mousemove', (e) => {
+  //   const y = e.clientY;
+  //   if (y > threshold && y < window.innerHeight - threshold) {
+  //     clearInterval(scrollInterval);
+  //   }
+  // });//
 
 //INDEX PAGE LOGIC************************************************************************//
 

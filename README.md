@@ -23,7 +23,11 @@ French Flag - src="https://flagcdn.com/40x30/fr.png"
 ### 🌍 **Classic Itinerary**
 - Café de Flore – Photo by [Jose Vasquez](https://www.pexels.com/photo/sidewalk-cafe-on-city-street-10674619/) on Pexels
 - Hot Chocolate = Photo by [Fallon Michael]: (https://www.pexels.com/photo/cup-of-brown-coffee-3551717/) on Pexels
-
+- Seine River - Photo by [Karography]:( https://www.pexels.com/photo/majestic-view-of-notre-dame-cathedral-in-paris-32707344/)
+- Evening meal - Photo by  Céline  |: https://www.pexels.com/photo/street-near-eiffel-tower-during-dusk-8797910/
+- Musee D'Orsay clock Photo by Nolwenn Coene: https://www.pexels.com/photo/photo-of-vintage-analog-wall-clock-1023064/
+- Latin Bistro Photo by Mathias Reding: https://www.pexels.com/photo/neon-signage-outside-the-bar-11077596/
+- Seine Cruise Photo by Edward Eyer: https://www.pexels.com/photo/people-in-boat-2860061/
 ---
 
 ### 🍴 **Cuisine Page**
