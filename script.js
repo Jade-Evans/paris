@@ -593,6 +593,11 @@ document.querySelectorAll(".place-checkbox").forEach((box)=>{
 
 });
 
+//PLAN YOUR VISIT PAGE*********************************************************************************//
+
+
+
+
 
 
 
