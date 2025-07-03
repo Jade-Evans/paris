@@ -30,6 +30,16 @@ French Flag - src="https://flagcdn.com/40x30/fr.png"
 - Seine Cruise Photo by Edward Eyer: https://www.pexels.com/photo/people-in-boat-2860061/
 ---
 
+## Romantic Itinerary**
+- Banner Image/Pont des Arts Photo by <a href="https://unsplash.com/@pierre9x6?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pierre Blaché</a> on <a href="https://unsplash.com/photos/gray-metal-bridge-uMKBGyH8hCk?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+      
+## Hidden Gems Itinerary**
+-Sculptor (Zadkine) Photo by cottonbro studio: https://www.pexels.com/photo/a-person-shaping-a-soft-clay-6692610/
+-Parc des Buttes-Chaumont Photo by  Céline  |: https://www.pexels.com/photo/green-trees-beside-body-of-water-8038182/
+-recycled warehouse(le REcyclerie) Photo by Rachel Claire: https://www.pexels.com/photo/antique-furniture-and-scales-5865200/
+- Gallerie Vivienne Photo by Vincent Rivaud: https://www.pexels.com/photo/interior-of-the-galerie-vivienne-10672977/
+- Pedestrian paris street (rue monteruil) Photo by Margerretta: https://www.pexels.com/photo/people-walking-on-pedestrian-line-on-street-548084/
+-Vintage cafe (for Fontaine) Photo by  Céline  |: https://www.pexels.com/photo/wooden-tables-and-metal-chairs-outside-a-restaurant-14058686/
 ### 🍴 **Cuisine Page**
 - General food – Photo by [Jim Harris](https://unsplash.com/@jamesharris_photography) on [Unsplash](https://unsplash.com/photos/-otM7Ee0gys)  
 - Boulangerie – Photo by [Olga Serjantu](https://unsplash.com/@olgaserjantu) on [Unsplash](https://unsplash.com/photos/l0GfoEPgQ8A)  
