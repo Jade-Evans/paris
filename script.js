@@ -543,58 +543,68 @@ links.forEach(link => {
 
 //JS LOGIC FOR ADDING CHECKBOXES TO EACH PLACE//
 
-document.querySelectorAll(".category-item").forEach((category)=> {
-  const submenu = category.querySelector(".submenu"); //assign a variable so can check if it exists
-  if(submenu){//execute this code if there is a submenu within the "category"
-    submenu.querySelectorAll("li").forEach((item)=> {//search through each list item
-    const link = item.querySelector("a");//assign variable "link" to the attribute
-    if(!link) return;
-    const checkbox = document.createElement("input");//create the input element
-    checkbox.type = "checkbox"; //assign the type of input aka checkbox
-    checkbox.classList.add("place-checkbox"); //this creates and assigns a new class "place-checkbox" which will be assigned to all items
-    checkbox.dataset.placeId = link.id; //this grabs the existing id of each specific link and relates it to the placeId to be used. 
-    item.appendChild(checkbox); //add the checkbox to the end of item
-  });//closes all the actions happening if there is a submenu. 
-  }else{
+// document.querySelectorAll(".category-item").forEach((category)=> {
+//   const submenu = category.querySelector(".submenu"); //assign a variable so can check if it exists
+//   if(submenu){//execute this code if there is a submenu within the "category"
+//     submenu.querySelectorAll("li").forEach((item)=> {//search through each list item
+//     const link = item.querySelector("a");//assign variable "link" to the attribute
+//     if(!link) return;
+//     const checkbox = document.createElement("input");//create the input element
+//     checkbox.type = "checkbox"; //assign the type of input aka checkbox
+//     checkbox.classList.add("place-checkbox"); //this creates and assigns a new class "place-checkbox" which will be assigned to all items
+//     checkbox.dataset.placeId = link.id; //this grabs the existing id of each specific link and relates it to the placeId to be used. 
+//     item.appendChild(checkbox); //add the checkbox to the end of item
+//   });//closes all the actions happening if there is a submenu. 
+//   }else{
 
-    const topicHeading = category.querySelector("h3"); //assigns a variable to the h3s IF no submenu is present in category items
-    if(!topicHeading) return;
-    if(topicHeading){
-    const checkbox = document.createElement("input");//create the input element
-    checkbox.type = "checkbox"; //assign the type of input aka checkbox
-    checkbox.classList.add("place-checkbox"); //this creates and assigns a new class "place-checkbox" which will be assigned to all items
-    checkbox.dataset.placeId = category.id;
-    category.appendChild(checkbox); //this grabs the existing id of each specific link and relates it to the placeId to be used. 
-    };//closes all the actions happening if there is a submenu. 
-  }//closes the actions in the whole if...else statement 
-});//closes the actions happening for all items in the .category-items query selector
+//     const topicHeading = category.querySelector("h3"); //assigns a variable to the h3s IF no submenu is present in category items
+//     if(!topicHeading) return;
+//     if(topicHeading){
+//     const checkbox = document.createElement("input");//create the input element
+//     checkbox.type = "checkbox"; //assign the type of input aka checkbox
+//     checkbox.classList.add("place-checkbox"); //this creates and assigns a new class "place-checkbox" which will be assigned to all items
+//     checkbox.dataset.placeId = category.id;
+//     category.appendChild(checkbox); //this grabs the existing id of each specific link and relates it to the placeId to be used. 
+//     };//closes all the actions happening if there is a submenu. 
+//   }//closes the actions in the whole if...else statement 
+// });//closes the actions happening for all items in the .category-items query selector
 
-//CREATE LOGIC SO THAT MESSAGE APPEARS WHEN HOVER OVER A PLACE-CHECKBOX//
+// //CREATE LOGIC SO THAT MESSAGE APPEARS WHEN HOVER OVER A PLACE-CHECKBOX//
 
-document.querySelectorAll(".place-checkbox").forEach((box)=>{
-    let checkWishlist;//must be defined outside of mouseover/mouseout so it works for both otherwise only works on one. 
-    box.addEventListener("mouseover", ()=>{
-    if(!checkWishlist){
-    checkWishlist = document.createElement("div");
-    checkWishlist.textContent = "add to itinerary wishlist";
-    checkWishlist.classList.add("wishlist");
-    box.parentElement.appendChild(checkWishlist);
-    checkWishlist.style.opacity = 0;//for immediate fade, use opacity 0 to 1 but not the timer (this delays).
-    }
-    checkWishlist.style.opacity = 1;
+// document.querySelectorAll(".place-checkbox").forEach((box)=>{
+//     let checkWishlist;//must be defined outside of mouseover/mouseout so it works for both otherwise only works on one. 
+//     box.addEventListener("mouseover", ()=>{
+//     if(!checkWishlist){
+//     checkWishlist = document.createElement("div");
+//     checkWishlist.textContent = "add to itinerary wishlist";
+//     checkWishlist.classList.add("wishlist");
+//     box.parentElement.appendChild(checkWishlist);
+//     checkWishlist.style.opacity = 0;//for immediate fade, use opacity 0 to 1 but not the timer (this delays).
+//     }
+//     checkWishlist.style.opacity = 1;
     
-  });
-  box.addEventListener("mouseout", ()=>{
-    if(checkWishlist){
-      checkWishlist.style.opacity = 0;
-      }
-  });
+//   });
+//   box.addEventListener("mouseout", ()=>{
+//     if(checkWishlist){
+//       checkWishlist.style.opacity = 0;
+//       }
+//   });
 
 
-});
+// });
 
 //PLAN YOUR VISIT PAGE*********************************************************************************//
+const planVisitList = document.getElementById("favactivitieslist");
 
+const itineraryPlaces = querySelectorAll(".time-of-day h3");
+
+// let unorderedList = document.querySelector("#grocery-list")
+// let fruits = ["apple", "banana", "kiwi", "mango"]
+itineraryPlaces.forEach(element => {//element is the h3//
+  let newLI = document.createElement("li");//need to create a new list element each time otherwise will overwrite//
+  newLI.innerText = element.innerText;//element.innerText is the text content ONLY within the h3//
+  planVisitList.appendChild(newLI); //adds new list element to the end of each list//
+});
 
 
 
