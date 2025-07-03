@@ -594,16 +594,33 @@ links.forEach(link => {
 // });
 
 //PLAN YOUR VISIT PAGE*********************************************************************************//
-const planVisitList = document.getElementById("favactivitieslist");
+//1. Need to store the placeNames from various itinerary pages into local storage so they can be retrieved and used
+//on "plan your visit" page. 
+//WORK ON TOMORROW//
+const placeNamesLocalStorage = [];//create an empty array variable to store the itinerary place names//
+document.querySelectorAll(".itineraryPlaceNames").forEach((element)=>{ 
+  placeNamesLocalStorage.push(element.innerText);
+});
+localStorage.setItem("placeNames", JSON.stringify()); 
 
-const itineraryPlaces = querySelectorAll(".time-of-day h3");
+window.addEventListener("DOMContentLoaded", () => {
+    const planVisitList = document.getElementById("favactivitieslist");
+    const itineraryPlaces = document.querySelectorAll(".itineraryPlaceName");
+    if (!planVisitList) {
+    console.error("Element with ID 'favactivitieslist' not found.");
+    return;
+    }
 
-// let unorderedList = document.querySelector("#grocery-list")
-// let fruits = ["apple", "banana", "kiwi", "mango"]
-itineraryPlaces.forEach(element => {//element is the h3//
-  let newLI = document.createElement("li");//need to create a new list element each time otherwise will overwrite//
-  newLI.innerText = element.innerText;//element.innerText is the text content ONLY within the h3//
-  planVisitList.appendChild(newLI); //adds new list element to the end of each list//
+    if (!itineraryPlaces || itineraryPlaces.length === 0) {
+    console.warn("No itinerary place links found.");
+    return;
+    }
+
+  itineraryPlaces.forEach((element) => {
+    let newLI = document.createElement("li");//need to create a new list element each time otherwise will overwrite//
+    newLI.innerText = element.innerText;//element.innerText is the text content ONLY within the h3//
+    planVisitList.appendChild(newLI); //adds new list element to the end of each list//
+  });
 });
 
 
