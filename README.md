@@ -91,4 +91,87 @@ French Flag - src="https://flagcdn.com/40x30/fr.png"
 - Dining – Photo by [Olimpia Campean](https://unsplash.com/@olimpiaborodiunsplash) on [Unsplash](https://unsplash.com/photos/8YmAPk1Uq_U)  
 - Eiffel Tower at night – Photo by [Anna Hunko](https://unsplash.com/@annahunko) on [Unsplash](https://unsplash.com/photos/CzcRCklTbkE)
 
-      
+🧠 LEARNING LOG
+📦 localStorage
+A built-in browser feature for storing data that can be used across multiple pages.
+
+Used for storing small sets of data (up to 5MB) on the user's device when there's no server.
+
+Example: I stored the .itineraryPlaceName elements retrieved from the itinerary web pages in localStorage, to be retrieved for use in the list on the "Plan Your Visit" page.
+
+🔁 JSON.stringify() & JSON.parse()
+These two functions work as a pair:
+
+JSON.stringify() – turns the elements inside into a string.
+
+JSON.parse() – turns stringified data back into an array/original format/readable JavaScript code.
+
+Example:
+I used JSON.stringify(placeNameLocalStorage) to turn the array into a string, as localStorage can only store strings.
+
+localStorage.setItem("placeNameLSKey", JSON.stringify(placeNameLocalStorage))
+This stores the stringified array under the key "placeNameLSKey", which can later be retrieved with getItem().
+
+Later, I retrieved it using:
+
+JSON.parse(localStorage.getItem("placeNameLSKey"))
+
+✂️ .trim()
+Removes any whitespace from the beginning or end of a string.
+
+💬 Code I worked on but didn’t include
+Although I eventually got it to generate the list, it only worked if I navigated specifically from one of the itinerary pages to the Plan Your Visit page. I wanted that list to appear all the time, regardless of how the user arrived there.
+
+It probably would’ve worked fine if the user went through the website systematically (e.g. reading the itinerary pages first, then going to curate their own visit), but that couldn’t be guaranteed. I didn’t want the Plan Your Visit page to end up blank or show a default message if someone skipped steps.
+
+✅ Why I’m including it here
+This code has been included below for reflection and future reference — and because I learned a lot from it!
+
+🧪 Code
+js
+Copy
+Edit
+// 1. Store the place names from itinerary pages into localStorage so they can be used on "Plan Your Visit" page
+window.addEventListener("DOMContentLoaded", () => {
+  const path = window.location.pathname;
+
+  if (
+    path.includes("classic.html") ||
+    path.includes("romantic.html") ||
+    path.includes("hiddengems.html")
+  ) {
+    const itineraryPlaces = document.querySelectorAll(".itineraryPlaceName");
+
+    if (itineraryPlaces.length > 0) {
+      const placeNamesLocalStorage = [];
+      itineraryPlaces.forEach((element) => {
+        placeNamesLocalStorage.push(element.innerText.trim());
+      });
+
+      localStorage.setItem("placeNameLSKey", JSON.stringify(placeNamesLocalStorage));
+      console.log(localStorage.getItem("placeNameLSKey"));
+    }
+  }
+
+  if (path.includes("planvisit.html")) {
+    const planVisitList = document.getElementById("favactivitieslist");
+
+    if (!planVisitList) {
+      console.warn("No plan visit list found on planvisit.html.");
+      return;
+    }
+
+    const retrievedArray = JSON.parse(localStorage.getItem("placeNameLSKey"));
+
+    if (!retrievedArray || retrievedArray.length === 0) {
+      console.error("No place names found in local storage.");
+      return;
+    }
+
+    retrievedArray.forEach((placeName) => {
+      let newListItem = document.createElement("li");
+      newListItem.innerText = placeName;
+      planVisitList.appendChild(newListItem);
+    });
+  }
+});
