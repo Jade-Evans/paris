@@ -543,19 +543,7 @@ links.forEach(link => {
 
 //JS LOGIC FOR ADDING CHECKBOXES TO EACH PLACE//
 
-// document.querySelectorAll(".category-item").forEach((category)=> {
-//   const submenu = category.querySelector(".submenu"); //assign a variable so can check if it exists
-//   if(submenu){//execute this code if there is a submenu within the "category"
-//     submenu.querySelectorAll("li").forEach((item)=> {//search through each list item
-//     const link = item.querySelector("a");//assign variable "link" to the attribute
-//     if(!link) return;
-//     const checkbox = document.createElement("input");//create the input element
-//     checkbox.type = "checkbox"; //assign the type of input aka checkbox
-//     checkbox.classList.add("place-checkbox"); //this creates and assigns a new class "place-checkbox" which will be assigned to all items
-//     checkbox.dataset.placeId = link.id; //this grabs the existing id of each specific link and relates it to the placeId to be used. 
-//     item.appendChild(checkbox); //add the checkbox to the end of item
-//   });//closes all the actions happening if there is a submenu. 
-//   }else{
+
 
 //     const topicHeading = category.querySelector("h3"); //assigns a variable to the h3s IF no submenu is present in category items
 //     if(!topicHeading) return;
@@ -594,38 +582,11 @@ links.forEach(link => {
 // });
 
 //PLAN YOUR VISIT PAGE*********************************************************************************//
-//1. Need to store the placeNames from various itinerary pages into local storage so they can be retrieved and used
-//on "plan your visit" page. 
-//WORK ON TOMORROW//
-const placeNamesLocalStorage = [];//create an empty array variable to store the itinerary place names//
-document.querySelectorAll(".itineraryPlaceNames").forEach((element)=>{ 
-  placeNamesLocalStorage.push(element.innerText);
-});
-localStorage.setItem("placeNames", JSON.stringify()); 
 
-window.addEventListener("DOMContentLoaded", () => {
-    const planVisitList = document.getElementById("favactivitieslist");
-    const itineraryPlaces = document.querySelectorAll(".itineraryPlaceName");
-    if (!planVisitList) {
-    console.error("Element with ID 'favactivitieslist' not found.");
-    return;
-    }
-
-    if (!itineraryPlaces || itineraryPlaces.length === 0) {
-    console.warn("No itinerary place links found.");
-    return;
-    }
-
-  itineraryPlaces.forEach((element) => {
-    let newLI = document.createElement("li");//need to create a new list element each time otherwise will overwrite//
-    newLI.innerText = element.innerText;//element.innerText is the text content ONLY within the h3//
-    planVisitList.appendChild(newLI); //adds new list element to the end of each list//
-  });
-});
+    
 
 
-
-
-
-
-
+    
+            
+    
+          

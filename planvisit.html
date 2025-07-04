@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Museums & Culture</title>
+    <title>Plan Your Visit</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,9 +52,39 @@
             </div>
 
     <div class="dreamItineraryList">
-        <h2>Favourite Activities</h2>
-        <p>The list below has been compiled of the items you checked from previous pages to allow you to compile your own dream itinerary.</p>
-        <ul id="favactivitieslist">
+        <h2>Paris Activities</h2>
+        <p>The list below has been compiled of the items you may have seen from the other pages. For simplicity, we've grouped them into 
+            the various sections (cusine, architecture etc.) so that you can reflect back on the page for more information should you wish. 
+        </p>
+        <ul id="activitiesFullList">
+            <div class="foodSection">
+                <h2>Food & Drink List</h2>
+                <ul class="cusineFullList PYVList">
+                    <li id="dupain"> Pain et des Idées</li>
+                    <li id="grenierapain"> Grenier à Pain (Montmartre)</li>
+                    <li id="utopie">Boulangerie Utopie</li>
+                    <li id="lacafeotheque">La Caféothèque (For Coffee Lovers)</li>
+                    <li id="cafecoutume"> Café Coutume(Renowned Specialty Coffee)</li>
+                    <li id="tenbelles">Ten Belles</li>
+                    <li id="lafontainedemars">La Fontaine de Mars</li>
+                    <li id="chezfernand"> Chez Fernand Rue Christine</li>
+                    <li id="bouillonchartier">Bouillon Chartier</li>
+                    <li id="lamaisonrose">La Maison Rose</li>
+                    <li id="carette">Carette</li>
+                    <li id="berthillon">Berthillon Ice Cream</li>
+                    <li id="angelina">Mademoiselle Angelina</li>
+                    <li id="pierreherme">=Pierre Hermes</li>
+                    <li id="cafedeflore">Café de Flore</li>
+                    <li id="lesdeuxmagots">Les Deux Magots – Historic Literary Café</li>
+                    <li id="girafe"> Girafe Restaurant(Eiffel Tower view)</li>
+                </ul>
+            </div>
+            <div class="architectureSection">
+                <h2>Architecture List</h2>
+                <ul class="fullArchitectureList">
+                
+                </ul>
+            </div>
             
         </ul>
     </div>
@@ -73,4 +103,28 @@
         <div class="social-icons"><img src='imgs/social-icons.svg'>
     </div>
     <script src="script.js"></script>
+    <script>
+        const listItems = document.querySelectorAll(".PYVList li");
+        listItems.forEach((item)=> {
+            let itemText = item.innerText;
+            const PYVCheckbox = document.createElement("input");
+            PYVCheckbox.type = "checkbox";
+            PYVCheckbox.classList.add("itemCheckbox");
+            PYVCheckbox.dataset.placeId = item.id;
+            item.prepend(PYVCheckbox);
+        });
+
+//   const submenu = category.querySelector(".submenu"); //assign a variable so can check if it exists
+//   if(submenu){//execute this code if there is a submenu within the "category"
+//     submenu.querySelectorAll("li").forEach((item)=> {//search through each list item
+//     const link = item.querySelector("a");//assign variable "link" to the attribute
+//     if(!link) return;
+//     const checkbox = document.createElement("input");//create the input element
+//     checkbox.type = "checkbox"; //assign the type of input aka checkbox
+//     checkbox.classList.add("place-checkbox"); //this creates and assigns a new class "place-checkbox" which will be assigned to all items
+//     checkbox.dataset.placeId = link.id; //this grabs the existing id of each specific link and relates it to the placeId to be used. 
+//     item.appendChild(checkbox); //add the checkbox to the end of item
+//   });//closes all the actions happening if there is a submenu. 
+//   }else{
+    </script>
 </body>
