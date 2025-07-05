@@ -522,4 +522,44 @@ html, body{
 }
 
 
+/* Plan visit styling**************************************************************************/
 
+.planvisit-container{
+    display: flex;
+}
+
+.sidebar{
+    flex: 25%;
+    background-color: red;
+    display: inline-block;
+}
+
+.builder-container{
+    flex: 75%;
+    display: column;
+}
+
+
+.PYVList{
+    list-style-type: none;
+    display:none;
+    
+}
+.activity-category.active + .PYVList{
+    display:block;
+}
+.activity-category:hover, .PYVList li:hover{
+    color:#5f5353;
+}
+
+.activity-section{
+    background-color: #eae7e7;
+    font-size: 15px;
+    padding: 5px;
+    cursor:pointer;
+    
+}
+
+.itemCheckbox{
+    padding-right: 5px;
+} 

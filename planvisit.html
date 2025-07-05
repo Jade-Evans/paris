@@ -9,16 +9,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap" rel="stylesheet">
 
 <body>
-    <!--HEADER SECTION------------------------------------------------------------------------->
+    <!--HEADER activity-section------------------------------------------------------------------------->
     <div class="header-container">
         <div class="header">  
-    <!--LOGO SPECIFIC SECTION (lHS OF HEADER)------------------------------------------------------>
+    <!--LOGO SPECIFIC activity-section (lHS OF HEADER)------------------------------------------------------>
             <div class="logo" >
                 <img src="https://flagcdn.com/40x30/fr.png" srcset="https://flagcdn.com/80x60/fr.png 2x,https://flagcdn.com/120x90/fr.png 3x"
                     width="40" height="30" alt="France">
                 <p>Jade's Parisian Guide</p>
             </div>
-    <!--NAV BAR SPECIFIC SECTION (RHS OF HEADER)-------------------------------------------------------->
+    <!--NAV BAR SPECIFIC activity-section (RHS OF HEADER)-------------------------------------------------------->
             <nav class="nav-bar">
                 <ul>
                     <li><a href="index.html" class="nav-item">Home</a></li>
@@ -46,28 +46,29 @@
             </nav>
         </div>
     </div>
-            <div class="headings">
-                <h1 class="page-title"> Plan Your Visit</h1>
-                <h2 class="tagline">Plan your perfect trip to Paris with the tools below</h2>
-            </div>
+    <div class="headings">
+        <h1 class="page-title"> Plan Your Visit</h1>
+        <h2 class="tagline">Plan your perfect trip to Paris with the tools below</h2>
+    </div>
 
-    <div class="dreamItineraryList">
-        <h2>Paris Activities</h2>
-        <p>The list below has been compiled of the items you may have seen from the other pages. For simplicity, we've grouped them into 
-            the various sections (cusine, architecture etc.) so that you can reflect back on the page for more information should you wish. 
-        </p>
-        <ul id="activitiesFullList">
-            <div class="foodSection">
-                <h2>Food & Drink</h2>
-                <ul class="cusineFullList PYVList">
+    
+    <h2>Paris Activities</h2>
+    <p>The list below has been compiled of the items you may have seen from the other pages. For simplicity, we've grouped them into 
+        the various activity-sections (cusine, architecture etc.) so that you can reflect back on the page for more information should you wish. 
+    </p>
+    <div class="planvisit-container">
+        <aside class="sidebar">
+            <div class="activity-section">
+                <h2 class="activity-category">Food & Drink</h2>
+                <ul class="PYVList">
                     <li id="dupain"> Pain et des Idées</li>
-                    <li id="grenierapain"> Grenier à Pain (Montmartre)</li>
+                    <li id="grenierapain"> Grenier à Pain</li>
                     <li id="utopie">Boulangerie Utopie</li>
-                    <li id="lacafeotheque">La Caféothèque (For Coffee Lovers)</li>
-                    <li id="cafecoutume"> Café Coutume(Renowned Specialty Coffee)</li>
+                    <li id="lacafeotheque">La Caféothèque</li>
+                    <li id="cafecoutume"> Café Coutume</li>
                     <li id="tenbelles">Ten Belles</li>
                     <li id="lafontainedemars">La Fontaine de Mars</li>
-                    <li id="chezfernand"> Chez Fernand Rue Christine</li>
+                    <li id="chezfernand"> Chez Fernand</li>
                     <li id="bouillonchartier">Bouillon Chartier</li>
                     <li id="lamaisonrose">La Maison Rose</li>
                     <li id="carette">Carette</li>
@@ -75,13 +76,13 @@
                     <li id="angelina">Mademoiselle Angelina</li>
                     <li id="pierreherme">=Pierre Hermes</li>
                     <li id="cafedeflore">Café de Flore</li>
-                    <li id="lesdeuxmagots">Les Deux Magots – Historic Literary Café</li>
-                    <li id="girafe"> Girafe Restaurant(Eiffel Tower view)</li>
+                    <li id="lesdeuxmagots">Les Deux Magots</li>
+                    <li id="girafe"> Girafe Restaurant</li>
                 </ul>
             </div>
-            <div class="architectureSection">
-                <h2>Architecture</h2>
-                <ul class="fullArchitectureList PYVList">
+            <div class="activity-section">
+                <h2 class="activity-category">Architecture</h2>
+                <ul class="PYVList">
                     <li id="eiffeltower">Eiffel Tower</li>
                     <li id="notredame">Notre-Dame Cathedral</li>
                     <li id="saintechapelle">Sainte chapelle</li>
@@ -91,9 +92,9 @@
                     <li id="sacrecoeur">Sacré-Cœur Basilica</li>
                 </ul>
             </div>
-             <div class="cultureSection">
-                <h2>Museums and Architecture</h2>
-                <ul class="fullCultureList PYVList">
+            <div class="activity-section">
+                <h2 class="activity-category">Museums & Culture</h2>
+                <ul class="PYVList">
                     <li id="louvre">The Louvre</li>
                     <li id="pompidou">The Pompidou Centre</li>
                     <li id="dorsay"> Musée d'Orsay</li>
@@ -102,45 +103,57 @@
                     <li id="catacombs">Catacombs of Paris</li>          
                 </ul>
             </div>
-            <div class="gardenSection">
-                <h2>Quartiers & Gardens</h2>
-                <ul class="fullGardenList PYVList">
+            <div class="activity-section">
+                <h2 class="activity-category">Quartiers & Gardens</h2>
+                <ul class="PYVList">
                     <li id="montmartre">Montmartre</li>
-                    <li id="plantee">Promenade Plantée (Coulée Verte René-Dumont)</li>
+                    <li id="plantee">Promenade Plantée</li>
                     <li id="plantes">Jardin des Plantes</li>
                     <li id="rue-cremieux">Rue Crémieux</li>
                     <li id="latin">Latin Quarter</li>
                     <li id="seine">Along the Seine</li>
-                    <li id="champs">Champs-Élysées to Arc de Triomphe</li>     
-                   
+                    <li id="champs">Champs-Élysées/Arc de Triomphe</li>     
+                
                 </ul>
             </div>
-             <div class="entertainmentSection">
-                <h2>Entertainment & Nightlife</h2>
-                <ul class="fullEntertainmentList PYVList">
+            <div class="activity-section">
+                <h2 class="activity-category">Entertainment & Nightlife</h2>
+                <ul class="PYVList">
                     <li id="paradislatin">Paradis Latin Dinner Show</li>
                     <li id="moulinrouge">Moulin Rouge</li>
-                    <li id="ducdeslombards">Duc des Lombards – Renowned Jazz Institution</li>
-                    <li id="sunsetsunside">Sunset Sunside – Twin Jazz Venues in the Heart of Paris</li>
-                    <li id="caveaudelahuchette">Le Caveau de la Huchette – Historic Jazz Cellar</li>
-                    <li id="balblomet">Le Bal Blomet – Vintage Parisian Vibes</li>
+                    <li id="ducdeslombards">Duc des Lombards</li>
+                    <li id="sunsetsunside">Sunset Sunside</li>
+                    <li id="caveaudelahuchette">Le Caveau de la Huchette</li>
+                    <li id="balblomet">Le Bal Blomet</li>
                     <li id="lebaronrouge">Le Baron Rouge</li>
                     <li id="leverrevole">Le Verre Volé</li>
                     <li id="leperchoir">Le Perchoir</li>
                     <li id="terrasshotel">Terrass' Hotel Rooftop</li>
-                    <li id="shakespearecompany">Shakespeare and Company</li>
-                    <li id="nighteiffel">Eiffel Tower Light Show</li>
                     <li id="seinecruise">Seine River Cruise</li>
-                    <li id="seinebanks">Walk Along the Seine</li>
-                    <li id="montmartre">Montmartre at Night</li>
-                    <li id="ilecitestroll">Île de la Cité & Île Saint-Louis Stroll</li>
-                    </ul>
-                   
+                    <li id="ilecitestroll">Île de la Cité Stroll</li>
+                    
+                
                 </ul>
             </div>
-        </ul>
+        </aside>
+        <div class="builders-container">
+            <section class="itinerary-builder"></section>
+            <section class="map-builder"></section>
+            <section class="budget-builder"></section>
+        </div>
     </div>
+    <script src="script.js"></script>
+    <script>
+        const activityCategory = document.querySelectorAll(".activity-category");
+        activityCategory.forEach(category=>{
+                category.addEventListener("click", ()=>{
+                category.classList.toggle("active")
+            });
+        });
+    </script>
+</body>
 
+ 
 
 
 
@@ -149,7 +162,7 @@
 
 
    
-<!--FOOTER SECTION----------------->
+    <!--FOOTER activity-section----------------->
      <div class="footer-container">
         <footer class="copyright">Copyright@JadeEvansInc.</footer>
         <div class="social-icons"><img src='imgs/social-icons.svg'>
@@ -165,18 +178,4 @@
             PYVCheckbox.dataset.placeId = item.id;
             item.prepend(PYVCheckbox);
         });
-
-//   const submenu = category.querySelector(".submenu"); //assign a variable so can check if it exists
-//   if(submenu){//execute this code if there is a submenu within the "category"
-//     submenu.querySelectorAll("li").forEach((item)=> {//search through each list item
-//     const link = item.querySelector("a");//assign variable "link" to the attribute
-//     if(!link) return;
-//     const checkbox = document.createElement("input");//create the input element
-//     checkbox.type = "checkbox"; //assign the type of input aka checkbox
-//     checkbox.classList.add("place-checkbox"); //this creates and assigns a new class "place-checkbox" which will be assigned to all items
-//     checkbox.dataset.placeId = link.id; //this grabs the existing id of each specific link and relates it to the placeId to be used. 
-//     item.appendChild(checkbox); //add the checkbox to the end of item
-//   });//closes all the actions happening if there is a submenu. 
-//   }else{
-    </script>
-</body>
+    
