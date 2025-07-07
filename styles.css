@@ -530,6 +530,7 @@ html, body{
     justify-content: space-between; /* Align items to the left */
     height: 100%; /* Ensures full height for the map */
     margin: 20px;
+    gap: 20px;
 }
 
 .sidebar{
@@ -538,12 +539,6 @@ html, body{
     margin: 0;
 }
 
-.builders-container{
-    display: flex;
-    flex-direction: column;
-    flex:1;
-   
-}
 
 
 .PYVList{
@@ -575,11 +570,39 @@ html, body{
 .itemCheckbox{
     padding: 20px;
 }
+/*RHS "Builders" styling****************/
+.builders-container{
+    display: flex;
+    flex-direction: column;
+    flex:3; 
+    gap: 20px;
+}
+/*Itinerary table styling*************/
+
+.itinerary-builder{
+    width: 100%;
+    height: 450px;
+    background-color: #a29b9b;
+    
+    
+} 
+#itinerary-table{
+    flex:1;
+    border:2px solid rgb(63, 62, 62);
+    width: 80%;
+    margin: auto;
+    background-color: white;
+    text-align: left;
+   
+}
+#itinerary-table thead{
+    background-color:#eae7e7;
+}
 
 /*Map*********************/
 
 .map-builder{
-    flex: 3;
+    flex: 1;
     background-color: #5f5353;
 }
 #map { 
