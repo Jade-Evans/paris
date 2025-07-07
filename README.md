@@ -91,6 +91,10 @@ French Flag - src="https://flagcdn.com/40x30/fr.png"
 - Dining – Photo by [Olimpia Campean](https://unsplash.com/@olimpiaborodiunsplash) on [Unsplash](https://unsplash.com/photos/8YmAPk1Uq_U)  
 - Eiffel Tower at night – Photo by [Anna Hunko](https://unsplash.com/@annahunko) on [Unsplash](https://unsplash.com/photos/CzcRCklTbkE)
 
+## Map Credits ##
+Leaflet - https://leafletjs.com/
+OpenStreetMaps - attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+
 🧠 LEARNING LOG
 📦 localStorage
 A built-in browser feature for storing data that can be used across multiple pages.
@@ -118,6 +122,27 @@ JSON.parse(localStorage.getItem("placeNameLSKey"))
 
 ✂️ .trim()
 Removes any whitespace from the beginning or end of a string.
+
+## Map feature (planvisit.html) using Leaflet ##
+
+I used Leaflet to create the map of Paris for the "Plan your Visit Page".
+The intro guide on this page was very accessible, and guides through:
+- adding the stylesheet link to the head of the html document.
+- adding the script link to the bottom of the body of the html document. *N.B. This should come before any other script tags*
+- adding the <div id="map"> to the html body. 
+
+I acquired Paris coordinates from ChatGPT (this can also be done using Google Maps):
+const* map = L.map("map").setView([48.853, 2.35], 13); 
+**var is specified in the guidance but const is more up-to-date and compatible with Leaflet.*
+Here, L represents a Leaflet method, specifically L.map creates the map. 
+.setView([lat,long], zoom level) - sets the coordinates and the zoom level. 
+The final part of initial setup:
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+L.tileLayer: instructs to retreive the map image/tile from the URL specified (OpenStreetMap), with z,x,y as placeholders for the zoom, lat and long which are auto-filled with what we specified previously. 
+addTo(map): adds the tile layer to the map. 
 
 💬 Code I worked on but didn’t include
 Although I eventually got it to generate the list, it only worked if I navigated specifically from one of the itinerary pages to the Plan Your Visit page. I wanted that list to appear all the time, regardless of how the user arrived there.

@@ -333,6 +333,7 @@ html, body{
     align-items: center;
     margin-top: 35px;
     margin-bottom: 10px;
+    margin:auto;
 }
 
 /*ITINERARY PAGES--------------------------------------*/
@@ -526,17 +527,22 @@ html, body{
 
 .planvisit-container{
     display: flex;
+    justify-content: space-between; /* Align items to the left */
+    height: 100%; /* Ensures full height for the map */
+    margin: 20px;
 }
 
 .sidebar{
-    flex: 25%;
-    background-color: red;
-    display: inline-block;
+    flex: 0 0 20%;
+    margin: 10px;
+    margin: 0;
 }
 
-.builder-container{
-    flex: 75%;
-    display: column;
+.builders-container{
+    display: flex;
+    flex-direction: column;
+    flex:1;
+   
 }
 
 
@@ -544,9 +550,16 @@ html, body{
     list-style-type: none;
     display:none;
     
+    
 }
+.PYVList li{
+    padding-top:5px;
+    padding-left: 5px;
+}
+
 .activity-category.active + .PYVList{
-    display:block;
+    display:inline-block;
+    
 }
 .activity-category:hover, .PYVList li:hover{
     color:#5f5353;
@@ -559,7 +572,21 @@ html, body{
     cursor:pointer;
     
 }
-
 .itemCheckbox{
-    padding-right: 5px;
-} 
+    padding: 20px;
+}
+
+/*Map*********************/
+
+.map-builder{
+    flex: 3;
+    background-color: #5f5353;
+}
+#map { 
+    height: 450px;
+    width:90%; 
+    display:block;
+    background-color: #2E2E2E;
+    margin: auto;
+}
+

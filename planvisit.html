@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Plan Your Visit</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parisienne&display=swap" rel="stylesheet">
@@ -137,11 +140,30 @@
             </div>
         </aside>
         <div class="builders-container">
-            <section class="itinerary-builder"></section>
-            <section class="map-builder"></section>
-            <section class="budget-builder"></section>
+            <section class="itinerary-builder">
+                <h2>Itinerary Builder</h2>
+                <p>brief description here</p>
+            </section>
+            <section class="map-builder">
+                <h2>Map Builder</h2>
+                <p>brief description here</p>
+                 <div id="map"></div>
+                 
+            </section>
+            <section class="budget-builder">
+                <h2>Budget Calculator</h2>
+                <p>brief description here</p>
+            </section>
         </div>
     </div>
+    <div class="footer-container">
+        <footer class="copyright">Copyright@JadeEvansInc.</footer>
+        <div class="social-icons"><img src='imgs/social-icons.svg'>
+    </div>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin="">
+    </script>
     <script src="script.js"></script>
     <script>
         const activityCategory = document.querySelectorAll(".activity-category");
@@ -150,25 +172,6 @@
                 category.classList.toggle("active")
             });
         });
-    </script>
-</body>
-
- 
-
-
-
-
-
-
-
-   
-    <!--FOOTER activity-section----------------->
-     <div class="footer-container">
-        <footer class="copyright">Copyright@JadeEvansInc.</footer>
-        <div class="social-icons"><img src='imgs/social-icons.svg'>
-    </div>
-    <script src="script.js"></script>
-    <script>
         const listItems = document.querySelectorAll(".PYVList li");
         listItems.forEach((item)=> {
             let itemText = item.innerText;
@@ -178,4 +181,26 @@
             PYVCheckbox.dataset.placeId = item.id;
             item.prepend(PYVCheckbox);
         });
+        const map = L.map("map").setView([48.853, 2.35], 13);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map);
+        map.invalidateSize();
+
+    </script>
+   
+</body>
+
+        
+ 
+
+
+
+
+
+
+
+   
+    
     
