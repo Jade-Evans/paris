@@ -145,7 +145,7 @@
                 <p>brief description here</p>
                 <table id="itinerary-table">
                     <colgroup>
-                    <col style="width:200px;">
+                    <col style="width:150px;">
                     <col style="width:300px;">
                     <col style="width:300px;">
                 </colgroup>
@@ -166,8 +166,6 @@
                             <th>🌞 Morning</th>
                             <td></td>
                             <td></td>
-                            <td></td>
-                            <td></td>
                         </tr>
                         <tr>
                             <th>🍽 Lunch</th>
@@ -177,8 +175,6 @@
                         </tr>
                         <tr>
                             <th>🏛 Afternoon</th>
-                            <td></td>
-                            <td></td>
                             <td></td>
                             <td></td>
                         </tr>
@@ -231,6 +227,26 @@
             PYVCheckbox.classList.add("itemCheckbox");
             PYVCheckbox.dataset.placeId = item.id;
             item.prepend(PYVCheckbox);
+            //adding draggable features//
+            item.setAttribute("draggable", false);
+            const handleDragStart = function(e,placeData){
+                e.dataTransfer.setData("application/json",JSON.stringify(placeData));
+                };
+            PYVCheckbox.addEventListener("change",() =>{
+                
+                const isChecked = PYVCheckbox.checked;
+                item.setAttribute("draggable", isChecked);//set item to draggable if checked//
+                const placeData ={
+                    name: itemText,
+                    id: item.id,
+                }
+                if(isChecked){ 
+                    item.addEventListener("dragstart",(e)=>handleDragStart(e,placeData));//if draggable, make it so we can drag the placeData with it. 
+                    }
+                else{
+                    item.removeEventListener("dragstart", (e)=>handleDragStart(e,placeData));//else, not required. 
+                };
+        });
         });
         const map = L.map("map").setView([48.853, 2.35], 13);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
