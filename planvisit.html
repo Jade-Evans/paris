@@ -159,34 +159,34 @@
                     <tbody>
                         <tr>
                             <th>☕️ Breakfast</th>
-                            <td></td>
-                            <td></td>
+                            <td class="day1"></td>
+                            <td class="day2"></td>
                         </tr>
                         <tr>
                             <th>🌞 Morning</th>
-                            <td></td>
-                            <td></td>
+                             <td class="day1"></td>
+                            <td class="day2"></td>
                         </tr>
                         <tr>
                             <th>🍽 Lunch</th>
-                            <td></td>
-                            <td></td>
+                            <td class="day1"></td>
+                            <td class="day2"></td>
                             
                         </tr>
                         <tr>
                             <th>🏛 Afternoon</th>
-                            <td></td>
-                            <td></td>
+                            <td class="day1"></td>
+                            <td class="day2"></td>
                         </tr>
                         <tr>
                             <th>🌇 Evening</th>
-                            <td></td>
-                            <td></td>
+                            <td class="day1"></td>
+                            <td class="day2"></td>
                         </tr>
                         <tr>
                             <th>🌙 Night</th>
-                            <td></td>
-                            <td></td>
+                            <td class="day1"></td>
+                            <td class="day2"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -228,26 +228,46 @@
             PYVCheckbox.dataset.placeId = item.id;
             item.prepend(PYVCheckbox);
             //adding draggable features//
-            item.setAttribute("draggable", false);
-            const handleDragStart = function(e,placeData){
-                e.dataTransfer.setData("application/json",JSON.stringify(placeData));
-                };
-            PYVCheckbox.addEventListener("change",() =>{
+            item.setAttribute("draggable", false);//make item not draggable initially//
+            PYVCheckbox.addEventListener("change",() =>{//set event listener to listen for checked box//
                 
                 const isChecked = PYVCheckbox.checked;
+                item.style.backgroundColor = isChecked ? "blue":"";
+                item.style.color = isChecked ?  "white": "";
+                item.style.padding = isChecked ? "5px": "";
                 item.setAttribute("draggable", isChecked);//set item to draggable if checked//
-                const placeData ={
-                    name: itemText,
-                    id: item.id,
+                const placeData ={name: itemText,id: item.id};//define the content to be dragged with the item//
+                const handleDragStart = (e)=>{
+                    e.dataTransfer.setData("application/json",JSON(placeData).stringify);
                 }
                 if(isChecked){ 
-                    item.addEventListener("dragstart",(e)=>handleDragStart(e,placeData));//if draggable, make it so we can drag the placeData with it. 
+                    item.addEventListener("dragstart",handleDragStart);//if draggable, call the function so we can drag the data.  
                     }
                 else{
-                    item.removeEventListener("dragstart", (e)=>handleDragStart(e,placeData));//else, not required. 
+                    item.removeEventListener("dragstart",handleDragStart);//else, not required. 
                 };
         });
         });
+        //assign variables for all cells with a day1 and day2 class.
+        const day1cells = document.querySelectorAll(".day1");
+        const day2cells = document.querySelectorAll(".day2");
+        
+        //combine all the cells in both day1cells and day2cells to run event listeners for dropping the data for each item. //
+        [...day1cells,...day2cells].forEach(cell=>{
+            cell.addEventListener("dragover",(e)=>{
+                e.preventDefault();//this is what allows the cell to have something dropped in it. 
+                cell.style.border = "1px dashed green";
+            });
+            cell.addEventListener("dragleave",()=>{
+                cell.style.border = ""; //clears styling if nothing is dropped. 
+            });
+            cell.addEventListener("drop", (e)=>{
+                e.preventDefault();
+                cell.style.border = "";
+            });
+        });
+
+
         const map = L.map("map").setView([48.853, 2.35], 13);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,

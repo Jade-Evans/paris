@@ -123,6 +123,12 @@ JSON.parse(localStorage.getItem("placeNameLSKey"))
 ✂️ .trim()
 Removes any whitespace from the beginning or end of a string.
 
+[...day1Cells, ...day2Cells] - spread operator
+Takes all the elements from the two arrays (or array-like) and combines into a new array. 
+
+# ternary condation ? "":""#
+condition ? valueIfTrue : valueIfFalse;
+isChecked ? "blue" : "";
 ## Map feature (planvisit.html) using Leaflet ##
 
 I used Leaflet to create the map of Paris for the "Plan your Visit Page".
