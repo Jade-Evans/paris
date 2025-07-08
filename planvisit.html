@@ -227,6 +227,296 @@
     //We assign varaible names for these first. 
     const listItems = document.querySelectorAll(".PYVList li");//for the place names. 
     const allDay1AndDay2Cells = document.querySelectorAll(".day1, .day2");//for the cells that can be dropped into. 
+            const places = [
+        {
+            name: "Pain et des Idées",
+            id: "dupain",
+            lat: 48.8767,
+            lon: 2.3643,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sat: 7:30 AM - 7:00 PM, Sun: Closed"
+        },
+        {
+            name: "Grenier à Pain",
+            id: "grenierapain",
+            lat: 48.8940,
+            lon: 2.3358,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sat: 7:30 AM - 7:30 PM, Sun: 7:30 AM - 6:30 PM"
+        },
+        {
+            name: "Boulangerie Utopie",
+            id: "utopie",
+            lat: 48.8722,
+            lon: 2.3537,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sat: 7:30 AM - 8:00 PM, Sun: Closed"
+        },
+        {
+            name: "La Caféothèque",
+            id: "lacafeotheque",
+            lat: 48.8589,
+            lon: 2.3754,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sat: 8:00 AM - 7:00 PM, Sun: Closed"
+        },
+        {
+            name: "Café Coutume",
+            id: "cafecoutume",
+            lat: 48.8462,
+            lon: 2.3179,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sat: 8:00 AM - 6:00 PM, Sun: Closed"
+        },
+        {
+            name: "Ten Belles",
+            id: "tenbelles",
+            lat: 48.8690,
+            lon: 2.3642,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sat: 8:00 AM - 6:30 PM, Sun: Closed"
+        },
+        {
+            name: "La Fontaine de Mars",
+            id: "lafontainedemars",
+            lat: 48.8537,
+            lon: 2.3030,
+            ticketPrice: 35, // Approximate price for a meal
+            openingHours: "Mon-Sun: 12:00 PM - 2:30 PM, 7:00 PM - 10:30 PM"
+        },
+        {
+            name: "Chez Fernand",
+            id: "chezfernand",
+            lat: 48.8564,
+            lon: 2.3356,
+            ticketPrice: 40, // Approximate price for a meal
+            openingHours: "Mon-Sat: 12:00 PM - 2:30 PM, 7:00 PM - 10:30 PM"
+        },
+        {
+            name: "Bouillon Chartier",
+            id: "bouillonchartier",
+            lat: 48.8704,
+            lon: 2.3449,
+            ticketPrice: 15, // Approximate price for a meal
+            openingHours: "Mon-Sun: 11:30 AM - 10:30 PM"
+        },
+        {
+            name: "La Maison Rose",
+            id: "lamaisonrose",
+            lat: 48.8862,
+            lon: 2.3430,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: 8:00 AM - 8:00 PM"
+        },
+        {
+            name: "Carette",
+            id: "carette",
+            lat: 48.8671,
+            lon: 2.3098,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: 9:00 AM - 7:00 PM"
+        },
+        {
+            name: "Berthillon Ice Cream",
+            id: "berthillon",
+            lat: 48.8559,
+            lon: 2.2992,
+            ticketPrice: 6, // Approximate price for a serving
+            openingHours: "Mon-Sun: 10:30 AM - 7:00 PM"
+        },
+        {
+            name: "Mademoiselle Angelina",
+            id: "angelina",
+            lat: 48.8673,
+            lon: 2.3154,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: 7:30 AM - 7:00 PM"
+        },
+        {
+            name: "Pierre Hermé",
+            id: "pierreherme",
+            lat: 48.8671,
+            lon: 2.3131,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: 10:00 AM - 7:00 PM"
+        },
+        {
+            name: "Café de Flore",
+            id: "cafedeflore",
+            lat: 48.8557,
+            lon: 2.3325,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: 7:30 AM - 2:00 AM"
+        },
+        {
+            name: "Les Deux Magots",
+            id: "lesdeuxmagots",
+            lat: 48.8550,
+            lon: 2.3331,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: 7:30 AM - 2:00 AM"
+        },
+        {
+            name: "Girafe Restaurant",
+            id: "girafe",
+            lat: 48.8596,
+            lon: 2.3105,
+            ticketPrice: 50, // Approximate price for a meal
+            openingHours: "Mon-Sun: 12:00 PM - 2:30 PM, 7:00 PM - 10:30 PM"
+        },
+        {
+            name: "Eiffel Tower",
+            id: "eiffeltower",
+            lat: 48.8584,
+            lon: 2.2945,
+            ticketPrice: 25, // Approximate ticket price
+            openingHours: "Mon-Sun: 9:00 AM - 12:45 AM"
+        },
+        {
+            name: "Notre-Dame Cathedral",
+            id: "notredame",
+            lat: 48.8529,
+            lon: 2.3500,
+            ticketPrice: 10, // Approximate ticket price
+            openingHours: "Mon-Sun: 8:00 AM - 6:45 PM"
+        },
+        {
+            name: "Sainte Chapelle",
+            id: "saintechapelle",
+            lat: 48.8554,
+            lon: 2.3450,
+            ticketPrice: 10, // Approximate ticket price
+            openingHours: "Mon-Sun: 9:00 AM - 6:00 PM"
+        },
+        {
+            name: "Arc de Triomphe",
+            id: "arcdetriomphe",
+            lat: 48.8738,
+            lon: 2.2950,
+            ticketPrice: 12, // Approximate ticket price
+            openingHours: "Mon-Sun: 10:00 AM - 11:00 PM"
+        },
+        {
+            name: "Palais Garnier",
+            id: "palaisgarnier",
+            lat: 48.8708,
+            lon: 2.3317,
+            ticketPrice: 15, // Approximate ticket price
+            openingHours: "Mon-Sun: 10:00 AM - 5:00 PM"
+        },
+        {
+            name: "Luxembourg Palace",
+            id: "luxembourgpalace",
+            lat: 48.8462,
+            lon: 2.3375,
+            ticketPrice: 0, // Free entry to the garden
+            openingHours: "Mon-Sun: 7:30 AM - 8:00 PM"
+        },
+        {
+            name: "Sacré-Cœur Basilica",
+            id: "sacrecoeur",
+            lat: 48.8867,
+            lon: 2.3431,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: 6:00 AM - 10:30 PM"
+        },
+        {
+            name: "The Louvre",
+            id: "louvre",
+            lat: 48.8606,
+            lon: 2.3376,
+            ticketPrice: 17, // Approximate ticket price
+            openingHours: "Mon-Sun: 9:00 AM - 6:00 PM"
+        },
+        {
+            name: "Pompidou Centre",
+            id: "pompidou",
+            lat: 48.8607,
+            lon: 2.3522,
+            ticketPrice: 14, // Approximate ticket price
+            openingHours: "Mon-Sun: 11:00 AM - 9:00 PM"
+        },
+        {
+            name: "Musée d'Orsay",
+            id: "dorsay",
+            lat: 48.8599,
+            lon: 2.3266,
+            ticketPrice: 14, // Approximate ticket price
+            openingHours: "Mon-Sun: 9:30 AM - 6:00 PM"
+        },
+        {
+            name: "Musée de l'Orangerie",
+            id: "orangerie",
+            lat: 48.8638,
+            lon: 2.3225,
+            ticketPrice: 9, // Approximate ticket price
+            openingHours: "Mon-Sun: 9:00 AM - 6:00 PM"
+        },
+        {
+            name: "Musee de l'Arte Moderne",
+            id: "moderne",
+            lat: 48.8620,
+            lon: 2.3069,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: 10:00 AM - 6:00 PM"
+        },
+        {
+            name: "Catacombs of Paris",
+            id: "catacombs",
+            lat: 48.8338,
+            lon: 2.3321,
+            ticketPrice: 29, // Approximate ticket price
+            openingHours: "Mon-Sun: 9:45 AM - 8:30 PM"
+        },
+        {
+            name: "Montmartre",
+            id: "montmartre",
+            lat: 48.8897,
+            lon: 2.3317,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: Open 24 hours"
+        },
+        {
+            name: "Promenade Plantée",
+            id: "plantee",
+            lat: 48.8492,
+            lon: 2.3844,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: Open 24 hours"
+        },
+        {
+            name: "Jardin des Plantes",
+            id: "plantes",
+            lat: 48.8445,
+            lon: 2.3741,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: 7:30 AM - 8:00 PM"
+        },
+        {
+            name: "Rue Crémieux",
+            id: "rue-cremieux",
+            lat: 48.8529,
+            lon: 2.3750,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: Open 24 hours"
+        },
+        {
+            name: "Latin Quarter",
+            id: "latin",
+            lat: 48.8462,
+            lon: 2.3482,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: Open 24 hours"
+        },
+        {
+            name: "Along the Seine",
+            id: "seine",
+            lat: 48.8566,
+            lon: 2.3522,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: Open 24 hours"
+        }
+        ];
 
     //This is where the drop happens aka in the table cells:
     allDay1AndDay2Cells.forEach((cell) => {//we loop through each cell//
