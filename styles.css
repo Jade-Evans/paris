@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Montserrat, sans-serif;
+    color:#1c1c1c;
     /*border: 1px dotted #f45;*/
 }
 
@@ -368,7 +369,7 @@ html, body{
     font-style: italic;
     font-size: 60px;
 }
-.day h3{
+.day h3, .time-of-day h3, .time-of-day a{
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     font-size: 30px;
@@ -394,6 +395,15 @@ html, body{
     gap: 15px;
 }
 
+.time-of-day a{
+    color:auto;
+    text-decoration: none;
+    
+}
+.time-of-day a:hover{
+    color:#5f5353;
+    font-size: 32px;
+}
 .main-container{
     display:flex;
     margin-left: auto;
