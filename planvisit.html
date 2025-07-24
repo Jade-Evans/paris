@@ -227,7 +227,8 @@
     //We assign varaible names for these first. 
     const listItems = document.querySelectorAll(".PYVList li");//for the place names. 
     const allDay1AndDay2Cells = document.querySelectorAll(".day1, .day2");//for the cells that can be dropped into. 
-            const places = [
+    const markers = {}; //initialised to use later to store markers//      
+    const places = [
         {
             name: "Pain et des Idées",
             id: "dupain",
@@ -515,81 +516,112 @@
             lon: 2.3522,
             ticketPrice: 0, // Free entry
             openingHours: "Mon-Sun: Open 24 hours"
+        },
+        {
+            name: "Champs-Élysées / Arc de Triomphe",
+            id: "champselysees",
+            lat: 48.8738,
+            lon: 2.2950,
+            ticketPrice: 0, // Public area, free to explore (Arc has entry fee separately)
+            openingHours: "Mon-Sun: Open 24 hours"
+        },
+        {
+            name: "Paradis Latin Dinner Show",
+            id: "paradislatin",
+            lat: 48.8487,
+            lon: 2.3559,
+            ticketPrice: 90, // Approximate ticket with dinner
+            openingHours: "Mon-Sun: Shows typically 8:00 PM - 11:00 PM"
+        },
+        {
+            name: "Moulin Rouge",
+            id: "moulinrouge",
+            lat: 48.8841,
+            lon: 2.3324,
+            ticketPrice: 110, // Approximate ticket price
+            openingHours: "Mon-Sun: Shows typically 7:00 PM - 11:00 PM"
+        },
+        {
+            name: "Duc des Lombards",
+            id: "duclombards",
+            lat: 48.8606,
+            lon: 2.3461,
+            ticketPrice: 30, // Approximate cover charge
+            openingHours: "Mon-Sun: 7:00 PM - 2:00 AM"
+        },
+        {
+            name: "Sunset Sunside",
+            id: "sunsetsunside",
+            lat: 48.8609,
+            lon: 2.3446,
+            ticketPrice: 25, // Approximate ticket price
+            openingHours: "Mon-Sun: 6:00 PM - 2:00 AM"
+        },
+        {
+            name: "Le Caveau de la Huchette",
+            id: "caveaudelahuchette",
+            lat: 48.8524,
+            lon: 2.3456,
+            ticketPrice: 15, // Approximate ticket price
+            openingHours: "Mon-Sun: 9:30 PM - 2:00 AM"
+        },
+        {
+            name: "Le Bal Blomet",
+            id: "lebalblomet",
+            lat: 48.8422,
+            lon: 2.3084,
+            ticketPrice: 25, // Approximate ticket price
+            openingHours: "Varies by event (typically evenings)"
+        },
+        {
+            name: "Le Baron Rouge",
+            id: "lebaronrouge",
+            lat: 48.8473,
+            lon: 2.3765,
+            ticketPrice: 0, // Free entry
+            openingHours: "Tue-Sun: 10:00 AM - 10:00 PM, Mon: Closed"
+        },
+        {
+            name: "Le Verre Volé",
+            id: "leverrevole",
+            lat: 48.8705,
+            lon: 2.3663,
+            ticketPrice: 0, // Free entry (restaurant/bar)
+            openingHours: "Mon-Sun: 12:00 PM - 10:30 PM"
+        },
+        {
+            name: "Le Perchoir",
+            id: "leperchoir",
+            lat: 48.8641,
+            lon: 2.3708,
+            ticketPrice: 0, // Free entry, drinks priced separately
+            openingHours: "Mon-Sun: 4:00 PM - 1:00 AM"
+        },
+        {
+            name: "Terrass' Hotel Rooftop",
+            id: "terrasshotel",
+            lat: 48.8854,
+            lon: 2.3320,
+            ticketPrice: 0, // Free entry, drinks priced separately
+            openingHours: "Mon-Sun: 3:30 PM - 12:30 AM"
+        },
+        {
+            name: "Seine River Cruise",
+            id: "seinecruise",
+            lat: 48.8584,
+            lon: 2.2945,
+            ticketPrice: 15, // Approximate basic cruise fare
+            openingHours: "Mon-Sun: 10:00 AM - 10:00 PM"
+        },
+        {
+            name: "Île de la Cité Stroll",
+            id: "ilecite",
+            lat: 48.8546,
+            lon: 2.3470,
+            ticketPrice: 0, // Free entry
+            openingHours: "Mon-Sun: Open 24 hours"
         }
         ];
-
-    //This is where the drop happens aka in the table cells:
-    allDay1AndDay2Cells.forEach((cell) => {//we loop through each cell//
-        cell.addEventListener("dragover", (e) => {//we listen out if each cell has a "dragover"; if this e takes place:
-            e.preventDefault();//we use this line to enable dragover (browser blocks by default) - N.B. this essentially facilitates the dragover. 
-            cell.style.border = "2px dashed green";//this allows a visual cue for the user. 
-        });
-
-        cell.addEventListener("dragleave", () => {//we listen out if each cell has a dragleave; aka if the dragover but not dropped. 
-            cell.style.border = "";//this makes sure the visual cue for being dragged over isnt left on. 
-        });
-
-        cell.addEventListener("drop", (e) => {//we listen out if any cell has a drop event; if this event takes place:
-            e.preventDefault();//again, enables the drop which is otherwise blocked by browser.
-            cell.style.border = "";//removes the guidelines. 
-            const draggedData = JSON.parse(e.dataTransfer.getData("application/json")); //parses the data that is stringified when dragged.  
-
-            // prevent duplicate drops
-            const existing = cell.querySelector(`p[data-place-id="${draggedData.id}"]`);
-            if (existing) return;
-            //this is where we create the name that appears in the cell and append to the cell. 
-            const nameToAppear = document.createElement("p");
-            nameToAppear.textContent = draggedData.name;
-            nameToAppear.dataset.placeId = draggedData.id;
-            cell.appendChild(nameToAppear);
-        });
-    });
-    //This is where the actions on the list items happen aka creating the checkboxes and adding the drag features. 
-    listItems.forEach((item) => {
-        const itemText = item.innerText;//we need to assign this first as it is used later and we dont want the checkboxes copied with it. 
-        const checkbox = document.createElement("input");//create the checkbox.
-        checkbox.type = "checkbox";
-        checkbox.classList.add("itemCheckbox");
-        checkbox.dataset.placeId = item.id;//assign it an id that references its current identifier. NB this is refered to as data-place-id later. 
-        item.prepend(checkbox);//add to the start of the list item. 
-        item.setAttribute("draggable", false);//set it as not draggable initially. 
-
-        const handleDragStart = (e) => {//define a function to transfer the data when dragged. 
-            const placeData = { name: itemText, id: item.id };//define the data we want dragged. 
-            e.dataTransfer.setData("application/json", JSON.stringify(placeData));//stringify this data so it can be transferred.
-        };
-
-        checkbox.addEventListener("change", () => {//add event listener for when the box is checked. 
-            const isChecked = checkbox.checked;//assign a varaible for the checked boxes.
-            //visual changes upon checking. 
-            item.style.backgroundColor = isChecked ? "blue" : "";
-            item.style.color = isChecked ? "white" : "";
-            item.style.padding = isChecked ? "5px" : "";
-
-            item.setAttribute("draggable", isChecked);//now the checked box becomes draggable. 
-
-            if (isChecked) {
-                item.addEventListener("dragstart", handleDragStart);//if checked, add a listener so that if the dragstart event is detected, we execute the handleDrag aka convert and drag the date with it. 
-            } else {//aka if NOT CHECKED
-                item.removeEventListener("dragstart", handleDragStart);//undo the above 
-
-                // Remove any dropped <p> matching this item's ID
-                allDay1AndDay2Cells.forEach((cell) => {//so if not checked, seek out any items with a data-place-id matching the item.id and remove the p from it. 
-                    const droppedItems = cell.querySelectorAll(`p[data-place-id="${item.id}"]`);
-                    droppedItems.forEach((p) => p.remove());
-                });
-            }
-        });
-    });
-
-
-
-    
-    
-    
-        
-           
-
 
         const map = L.map("map").setView([48.853, 2.35], 13);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -597,6 +629,88 @@
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
         }).addTo(map);
         map.invalidateSize();
+
+    //This is where the drop happens aka in the table cells:
+        allDay1AndDay2Cells.forEach((cell) => {//we loop through each cell//
+            cell.addEventListener("dragover", (e) => {//we listen out if each cell has a "dragover"; if this e takes place:
+                e.preventDefault();//we use this line to enable dragover (browser blocks by default) - N.B. this essentially facilitates the dragover. 
+                cell.style.border = "2px dashed green";//this allows a visual cue for the user. 
+            });
+
+            cell.addEventListener("dragleave", () => {//we listen out if each cell has a dragleave; aka if the dragover but not dropped. 
+                cell.style.border = "";//this makes sure the visual cue for being dragged over isnt left on. 
+            });
+
+            cell.addEventListener("drop", (e) => {//we listen out if any cell has a drop event; if this event takes place:
+                e.preventDefault();//again, enables the drop which is otherwise blocked by browser.
+                cell.style.border = "";//removes the guidelines. 
+                const draggedData = JSON.parse(e.dataTransfer.getData("application/json")); //parses the data that is stringified when dragged.  
+            
+                // prevent duplicate drops
+                const existing = cell.querySelector(`p[data-place-id="${draggedData.id}"]`);
+                if (existing) return;
+                //this is where we create the name that appears in the cell and append to the cell. 
+                const nameToAppear = document.createElement("p");
+                nameToAppear.textContent = draggedData.name;
+                nameToAppear.dataset.placeId = draggedData.id;
+                cell.appendChild(nameToAppear);
+            
+            // Now we add the marker to the map when the item is dropped
+                const placeDetails = places.find(place => place.id === draggedData.id);
+
+                if (placeDetails) {
+                L.marker([placeDetails.lat, placeDetails.lon])
+                    .addTo(map)
+                    .bindPopup(`<b>${placeDetails.name}</b>`)
+                    .openPopup();
+                    markers[draggedData.id] = marker;
+                }
+            });
+        });
+    //This is where the actions on the list items happen aka creating the checkboxes and adding the drag features. 
+        listItems.forEach((item) => {
+            const itemText = item.innerText;//we need to assign this first as it is used later and we dont want the checkboxes copied with it. 
+            const checkbox = document.createElement("input");//create the checkbox.
+            checkbox.type = "checkbox";
+            checkbox.classList.add("itemCheckbox");
+            checkbox.dataset.placeId = item.id;//assign it an id that references its current identifier. NB this is refered to as data-place-id later. 
+            item.prepend(checkbox);//add to the start of the list item. 
+            item.setAttribute("draggable", false);//set it as not draggable initially. 
+
+            const handleDragStart = (e) => {//define a function to transfer the data when dragged. 
+                const placeData = { name: itemText, id: item.id };//define the data we want dragged. 
+                e.dataTransfer.setData("application/json", JSON.stringify(placeData));//stringify this data so it can be transferred.
+            }
+        
+
+            checkbox.addEventListener("change", () => {//add event listener for when the box is checked. 
+                const isChecked = checkbox.checked;//assign a varaible for the checked boxes.
+                //visual changes upon checking. 
+                item.style.backgroundColor = isChecked ? "blue" : "";
+                item.style.color = isChecked ? "white" : "";
+                item.style.padding = isChecked ? "5px" : "";
+
+                item.setAttribute("draggable", isChecked);//now the checked box becomes draggable. 
+
+                if (isChecked) {
+                    item.addEventListener("dragstart", handleDragStart);//if checked, add a listener so that if the dragstart event is detected, we execute the handleDrag aka convert and drag the date with it. 
+                } else {//aka if NOT CHECKED
+                    item.removeEventListener("dragstart", handleDragStart);//undo the above 
+
+                    // Remove any dropped <p> matching this item's ID
+                    allDay1AndDay2Cells.forEach((cell) => {//so if not checked, seek out any items with a data-place-id matching the item.id and remove the p from it. 
+                        const droppedItems = cell.querySelectorAll(`p[data-place-id="${item.id}"]`);
+                        droppedItems.forEach((p) => p.remove());
+                        
+                        
+                        if(markers[item.id]){///if the list item has a marker (in unchecked)...
+                            markers[item.id].remove();//remove the marker from the map. 
+                            delete(markers[item.id]);//delete it from the markers object made earlier to store the places with map markers. 
+                        }
+                   })
+            }
+        })
+        });
 
     </script>
    
